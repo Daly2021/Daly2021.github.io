@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>腾讯云部署hexo</title>
+      <link href="posts/a34f529.html"/>
+      <url>posts/a34f529.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="腾讯云部署hexo"><a href="#腾讯云部署hexo" class="headerlink" title="腾讯云部署hexo"></a>腾讯云部署hexo</h1><h3 id="一、部署环境与准备"><a href="#一、部署环境与准备" class="headerlink" title="一、部署环境与准备"></a>一、部署环境与准备</h3><h5 id="1-环境"><a href="#1-环境" class="headerlink" title="1.环境"></a>1.环境</h5><p>本地Windows10操作系统</p><p>腾讯云Cenots7.6服务器</p><h5 id="2-准备"><a href="#2-准备" class="headerlink" title="2.准备"></a>2.准备</h5><p>Hexo 本地博客</p><p>腾讯云终端操作</p><h3 id="二、云服务器配置Git"><a href="#二、云服务器配置Git" class="headerlink" title="二、云服务器配置Git"></a>二、云服务器配置Git</h3><h4 id="1-安装依赖库"><a href="#1-安装依赖库" class="headerlink" title="1.安装依赖库"></a>1.安装依赖库</h4><pre class="line-numbers language-none"><code class="language-none">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="2-安装编译工具"><a href="#2-安装编译工具" class="headerlink" title="2.安装编译工具"></a>2.安装编译工具</h4><pre class="line-numbers language-none"><code class="language-none">yum install gcc perl-ExtUtils-MakeMaker package<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="3-查看git的版本y"><a href="#3-查看git的版本y" class="headerlink" title="3.查看git的版本y"></a>3.查看git的版本y</h4><pre class="line-numbers language-none"><code class="language-none">git version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="4-删除git"><a href="#4-删除git" class="headerlink" title="4.删除git"></a>4.删除git</h4><pre class="line-numbers language-none"><code class="language-none">yum remove git -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="5-下载解压最新版"><a href="#5-下载解压最新版" class="headerlink" title="5.下载解压最新版"></a>5.下载解压最新版</h4><pre class="line-numbers language-none"><code class="language-none">cd /usr/local/src     #下载的目录wget http://ftp.ntu.edu.tw/software/scm/git/git-2.9.5.tar.gz       #下载最新版 tar -zvxf git-2.9.5.tar.gz          #解压到当前文件夹<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h4 id="6-编辑并安装"><a href="#6-编辑并安装" class="headerlink" title="6.编辑并安装"></a>6.编辑并安装</h4><pre class="line-numbers language-none"><code class="language-none">cd git-2.9.5 #进入文件夹make prefix=/usr/local/git all    #编译源码make prefix=/usr/local/git install    #安装路径<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h4 id="7-配置git的环境变量"><a href="#7-配置git的环境变量" class="headerlink" title="7.配置git的环境变量"></a>7.配置git的环境变量</h4><pre class="line-numbers language-none"><code class="language-none">echo 'export PATH=$PATH:/usr/local/git/bin' &gt;&gt; /etc/bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="8-刷新环境变量"><a href="#8-刷新环境变量" class="headerlink" title="8.刷新环境变量"></a>8.刷新环境变量</h4><pre class="line-numbers language-none"><code class="language-none">source /etc/bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="9-查看版本号"><a href="#9-查看版本号" class="headerlink" title="9.查看版本号"></a>9.查看版本号</h4><pre class="line-numbers language-none"><code class="language-none">git --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="10创建git用户并且修改权限"><a href="#10创建git用户并且修改权限" class="headerlink" title="10创建git用户并且修改权限"></a>10创建git用户并且修改权限</h4><pre class="line-numbers language-none"><code class="language-none">adduser CodeChengpasswd CodeChengchmod 740 /etc/sudoersvim /etc/sudoersroot    ALL=(ALL)       ALLCodeCheng     ALL=(ALL)       ALL<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="11-本地windows10使用Gitbash创建密钥"><a href="#11-本地windows10使用Gitbash创建密钥" class="headerlink" title="11.本地windows10使用Gitbash创建密钥"></a>11.本地windows10使用Gitbash创建密钥</h4><pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="12-将本地创建id-rsa-pub中文件复制"><a href="#12-将本地创建id-rsa-pub中文件复制" class="headerlink" title="12.将本地创建id_rsa.pub中文件复制"></a>12.将本地创建id_rsa.pub中文件复制</h4><pre class="line-numbers language-none"><code class="language-none">su CodeChengmkdir ~/.sshvim ~/.ssh/authorized_keys<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h4 id="13-本地测试"><a href="#13-本地测试" class="headerlink" title="13.本地测试"></a>13.本地测试</h4><pre class="line-numbers language-none"><code class="language-none">ssh -v CodeCheng@服务器ipssh -v CodeCheng1.15.122.167<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+          <category> 部署hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> 云服务器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>随笔</title>
+      <link href="posts/f77810a8.html"/>
+      <url>posts/f77810a8.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="这是CodeCheng的随笔板块，后续会更新文章，目前弄好了模板格式"><a href="#这是CodeCheng的随笔板块，后续会更新文章，目前弄好了模板格式" class="headerlink" title="这是CodeCheng的随笔板块，后续会更新文章，目前弄好了模板格式~"></a>这是CodeCheng的随笔板块，后续会更新文章，目前弄好了模板格式~</h3> <div class="ipage"> <div class="ititle">节选自《你若安好便是晴天》- 前言</div> <div class="izhengwen"> <p>几场梅雨，几卷荷风，江南已是烟水迷离。小院里湿润的青苔在雨中纯净生长。 </p> </div>节选自《你若安好便是晴天》- 前言<p>几场梅雨，几卷荷风，江南已是烟水迷离。小院里湿润的青苔在雨中纯净生长。这个季节，许多人都在打听关于莲荷的消息，以及茉莉在黄昏浮动的神秘幽香。不知多少人会记得有个女子，曾经走过人间四月天，又与莲开的夏季有过相濡以沫的约定。</p><p>一个人，一本书，一杯茶，一帘梦。有时候，寂寞是这样叫人心动，也只有此刻，世事才会如此波澜不惊。凉风吹起书页，这烟雨让尘封在书卷里的词章和故事弥漫着潮湿的气息。独倚幽窗，看转角处的青石小巷，一柄久违的油纸伞，遮住了低过屋檐的光阴。</p><p>时光微凉，那一场远去的往事被春水浸泡，秋风吹拂，早已洗去铅华，清绝明净。以为历经人生匆匆聚散，尝过尘世种种烟火，应该承担岁月带给我们的沧桑。可流年分明安然无恙，而山石草木是这样毫发无伤。只是曾经许过地老天荒的城，在细雨中越发地清瘦单薄。</p><p>青梅煎好的茶水，还是当年的味道；而我们等候的人，不会再来。后来才知道，那一袭素色白衣的女子已化身为燕，去寻觅水乡旧巢。她走过的地方，有一树一树的花开，她呢喃的梁间，还留着余温犹存的梦。有人说，她是个冰洁的女子，所以无论人世如何变迁，她都有着美丽的容颜。有人说，她是个理智的女子，不管面临怎样的诱惑，最后都可以全身而退。</p><p>她叫林徽因，出生于杭州，是许多人梦中期待的白莲。她在雨雾之都伦敦，发生过一场空前绝后的康桥之恋。她爱过三个男子，爱得清醒，也爱得平静。徐志摩为她徜徉在康桥，深情地等待一场旧梦可以归来。梁思成与她携手走过千山万水，为完成使命而相约白头。金岳霖为她终身不娶，痴心不改地守候一世。可她懂得人生飘忽不定，要学会随遇而安。<br> </p></div><p></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活感悟 </category>
+          
+          <category> 分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+            <tag> 感悟 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Mybtis配置</title>
+      <link href="posts/a1d9a8c4.html"/>
+      <url>posts/a1d9a8c4.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="mybatis-配置详解"><a href="#mybatis-配置详解" class="headerlink" title="mybatis 配置详解"></a>mybatis 配置详解</h1><h2 id="myatis-config-xml-核心配置文件"><a href="#myatis-config-xml-核心配置文件" class="headerlink" title="myatis-config.xml 核心配置文件"></a>myatis-config.xml 核心配置文件</h2><p>mybatis-config.xml 包含的内容如下</p><ul><li>configuration（配置）</li><li>properties（属性）</li><li>settings（设置）</li><li>typeAliases（类型别名）</li><li>typeHandlers（类型处理器）</li><li>objectFactory（对象工厂）</li><li>plugins（插件）</li><li>environments（环境配置）</li><li>environment（环境变量）</li><li>transactionManager（事务管理器）</li><li>dataSource（数据源）</li><li>databaseIdProvider（数据库厂商标识）</li><li>mappers（映射器）</li></ul><p><strong>注意元素节点的顺序！顺序不对会报错</strong></p><h3 id="1-environments元素"><a href="#1-environments元素" class="headerlink" title="1. environments元素"></a>1. environments元素</h3><pre class="line-numbers language-none"><code class="language-none">&lt;environments default="development"&gt; &lt;environment id="development"&gt;   &lt;transactionManager type="JDBC"&gt;     &lt;property name="..." value="..."/&gt;   &lt;/transactionManager&gt;   &lt;dataSource type="POOLED"&gt;     &lt;property name="driver" value="$&amp;#123;driver&amp;#125;"/&gt;     &lt;property name="url" value="$&amp;#123;url&amp;#125;"/&gt;     &lt;property name="username" value="$&amp;#123;username&amp;#125;"/&gt;     &lt;property name="password" value="$&amp;#123;password&amp;#125;"/&gt;   &lt;/dataSource&gt; &lt;/environment&gt; &lt;environment id="test"&gt;   &lt;transactionManager type="JDBC"&gt;     &lt;property name="..." value="..."/&gt;   &lt;/transactionManager&gt;   &lt;dataSource type="POOLED"&gt;     &lt;property name="driver" value="$&amp;#123;driver&amp;#125;"/&gt;     &lt;property name="url" value="$&amp;#123;url&amp;#125;"/&gt;     &lt;property name="username" value="$&amp;#123;username&amp;#125;"/&gt;     &lt;property name="password" value="$&amp;#123;password&amp;#125;"/&gt;   &lt;/dataSource&gt; &lt;/environment&gt;&lt;/environments&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li><p>environments配置mybatis 多套环境，将sql 映射到多个不同的数据库上，必须指定一个默认环境，即default=”development”</p><h4 id="1-1-子元素environment"><a href="#1-1-子元素environment" class="headerlink" title="1.1 子元素environment"></a>1.1 子元素environment</h4></li></ul><p>其中dataSource 数据源（共三种内建的数据源类型）</p><pre class="line-numbers language-java" data-language="java"><code class="language-java">type="[UNPOOLED|POOLED|JNDI]"）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>unpooled：这个数据源的实现只是每次被请求时打开和关闭连接</li><li><strong>pooled：这种数据源的实现利用“池”的概念将 JDBC 连接对象组织起来 , 这是一种使得并发 Web 应用快速响应请求的流行处理方式。</strong></li><li>jndi：这个数据源的实现是为了能在如 Spring 或应用服务器这类容器中使用，容器可以集中或在外部配置数据源，然后放置一个 JNDI 上下文的引用。</li></ul><p><strong>注： 数据源也有很多第三方的实现，比如dbcp，c3p0，druid等等….</strong></p><h4 id="1-2-transactionManager-事务管理器（共两种）"><a href="#1-2-transactionManager-事务管理器（共两种）" class="headerlink" title="1.2 transactionManager  事务管理器（共两种）"></a>1.2 transactionManager  事务管理器（共两种）</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java">&lt;transactionManager type="[ JDBC | MANAGED ]"/&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="2-mappers-元素（定义映射SQL语句文件）"><a href="#2-mappers-元素（定义映射SQL语句文件）" class="headerlink" title="2. mappers 元素（定义映射SQL语句文件）"></a>2. mappers 元素（定义映射SQL语句文件）</h3><p><strong>主要用于找到sql语句的文件在哪里？可以使用不同的方式引用sql语句 具体的引用方式如下</strong></p><ul><li><p>使用相对路径引入sql语句的文件</p><pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token comment">&lt;!-- 使用相对于类路径的资源引用 --&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mappers</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span> <span class="token attr-name">resource</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org/mybatis/builder/PostMapper.xml<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mappers</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>使用完全限定资源定位符（URL）</p><pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token comment">&lt;!-- 使用完全限定资源定位符（URL） --&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mappers</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span> <span class="token attr-name">url</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>file:///var/mappers/AuthorMapper.xml<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mappers</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>使用映射器接口实现类的完全限定类名,需要配置文件名称和接口名称一致，并且位于同一目录下</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+          <category> Mybatis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> mybatis </tag>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我自己常用windows快捷键</title>
+      <link href="posts/eef88033.html"/>
+      <url>posts/eef88033.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="我自己常用windows快捷键"><a href="#我自己常用windows快捷键" class="headerlink" title="我自己常用windows快捷键"></a>我自己常用windows快捷键</h1><h2 id="win"><a href="#win" class="headerlink" title="win +"></a><strong>win</strong> +</h2><ol><li>win+e 打开文件夹</li><li>win+r 打开命令提示符 ex:cmd </li><li>win+d 打开桌面</li><li>win+v 打开剪切板  用来查看历史粘贴  方便粘贴不用来回找</li><li>win+i 打开windows设置</li><li>win + 数字 打开应用程序 快速定位 跟win+t配合使用 按几就代开第几个应用</li><li>win + l 锁屏</li><li>win+t在底部工具栏切换应用程序</li><li>win+上下左右方向键    调节左右窗口 不用自己调整  左右（位置） 上下（放大缩小）</li><li>win+u打开设置主页 可以调整屏幕大小</li><li>win+q打开Windows搜索</li></ol><h1 id="有意思的快捷键也是常用的"><a href="#有意思的快捷键也是常用的" class="headerlink" title="有意思的快捷键也是常用的"></a>有意思的快捷键也是常用的</h1><ol><li>例如<strong>重命名</strong>直接f2 或者fn+f2</li><li>tab键盘  不止缩进  还可以回来shift+tab 直接回来</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 常用快捷键 </category>
+          
+          <category> windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 快捷键 </tag>
+            
+            <tag> 提升效率 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

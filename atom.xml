@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>CodeCheng</title>
+  
+  <subtitle>分享和收获</subtitle>
+  <link href="https://ck_cheng.gitee.io/atom.xml" rel="self"/>
+  
+  <link href="https://ck_cheng.gitee.io/"/>
+  <updated>2021-03-15T04:34:22.876Z</updated>
+  <id>https://ck_cheng.gitee.io/</id>
+  
+  <author>
+    <name>CodeCheng</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>腾讯云部署hexo</title>
+    <link href="https://ck_cheng.gitee.io/posts/a34f529.html"/>
+    <id>https://ck_cheng.gitee.io/posts/a34f529.html</id>
+    <published>2021-03-15T04:33:12.000Z</published>
+    <updated>2021-03-15T04:34:22.876Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;腾讯云部署hexo&quot;&gt;&lt;a href=&quot;#腾讯云部署hexo&quot; class=&quot;headerlink&quot; title=&quot;腾讯云部署hexo&quot;&gt;&lt;/a&gt;腾讯云部署hexo&lt;/h1&gt;&lt;h3 id=&quot;一、部署环境与准备&quot;&gt;&lt;a href=&quot;#一、部署环境与准备&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://ck_cheng.gitee.io/categories/Hexo/"/>
+    
+    <category term="部署hexo" scheme="https://ck_cheng.gitee.io/categories/Hexo/%E9%83%A8%E7%BD%B2hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://ck_cheng.gitee.io/tags/hexo/"/>
+    
+    <category term="云服务器" scheme="https://ck_cheng.gitee.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>随笔</title>
+    <link href="https://ck_cheng.gitee.io/posts/f77810a8.html"/>
+    <id>https://ck_cheng.gitee.io/posts/f77810a8.html</id>
+    <published>2021-03-15T04:26:55.000Z</published>
+    <updated>2021-03-15T04:49:47.765Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;这是CodeCheng的随笔板块，后续会更新文章，目前弄好了模板格式&quot;&gt;&lt;a href=&quot;#这是CodeCheng的随笔板块，后续会更新文章，目前弄好了模板格式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活感悟" scheme="https://ck_cheng.gitee.io/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
+    
+    <category term="分享" scheme="https://ck_cheng.gitee.io/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="随笔" scheme="https://ck_cheng.gitee.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="感悟" scheme="https://ck_cheng.gitee.io/tags/%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mybtis配置</title>
+    <link href="https://ck_cheng.gitee.io/posts/a1d9a8c4.html"/>
+    <id>https://ck_cheng.gitee.io/posts/a1d9a8c4.html</id>
+    <published>2021-03-15T03:09:17.000Z</published>
+    <updated>2021-03-15T03:11:21.577Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;mybatis-配置详解&quot;&gt;&lt;a href=&quot;#mybatis-配置详解&quot; class=&quot;headerlink&quot; title=&quot;mybatis 配置详解&quot;&gt;&lt;/a&gt;mybatis 配置详解&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="数据库" scheme="https://ck_cheng.gitee.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="Mybatis" scheme="https://ck_cheng.gitee.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/Mybatis/"/>
+    
+    
+    <category term="java" scheme="https://ck_cheng.gitee.io/tags/java/"/>
+    
+    <category term="mybatis" scheme="https://ck_cheng.gitee.io/tags/mybatis/"/>
+    
+    <category term="数据库" scheme="https://ck_cheng.gitee.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我自己常用windows快捷键</title>
+    <link href="https://ck_cheng.gitee.io/posts/eef88033.html"/>
+    <id>https://ck_cheng.gitee.io/posts/eef88033.html</id>
+    <published>2021-03-15T02:29:45.000Z</published>
+    <updated>2021-03-15T03:07:22.679Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;我自己常用windows快捷键&quot;&gt;&lt;a href=&quot;#我自己常用windows快捷键&quot; class=&quot;headerlink&quot; title=&quot;我自己常用windows快捷键&quot;&gt;&lt;/a&gt;我自己常用windows快捷键&lt;/h1&gt;&lt;h2 id=&quot;win&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="常用快捷键" scheme="https://ck_cheng.gitee.io/categories/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+    <category term="windows" scheme="https://ck_cheng.gitee.io/categories/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/windows/"/>
+    
+    
+    <category term="快捷键" scheme="https://ck_cheng.gitee.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+    <category term="提升效率" scheme="https://ck_cheng.gitee.io/tags/%E6%8F%90%E5%8D%87%E6%95%88%E7%8E%87/"/>
+    
+  </entry>
+  
+</feed>
