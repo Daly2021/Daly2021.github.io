@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery.min.js"></script>
-
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 <style type="text/css" lang="css">
     #loading-container{
         position: fixed;
@@ -309,11 +309,11 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/essay">
+        <a href="/xsp">
           
           <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>随笔</span>
+          <span>我的视频</span>
         </a>
       </li>
       
@@ -327,11 +327,11 @@
       </li>
       
       <li>
-        <a href="/games">
+        <a href="/essay">
           
           <i class="fas fa-gamepad" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>游戏</span>
+          <span>随笔</span>
         </a>
       </li>
       
@@ -466,11 +466,11 @@
               
                 <li>
 
-                  <a href="/essay " style="margin-left:50px">
+                  <a href="/xsp " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-film" style="position: absolute;left:28px" ></i>
 			      
-		          <span>随笔</span>
+		          <span>我的视频</span>
                   </a>
                 </li>
               
@@ -486,11 +486,11 @@
               
                 <li>
 
-                  <a href="/games " style="margin-left:50px">
+                  <a href="/essay " style="margin-left:50px">
 				  
 				   <i class="fa fas fa-gamepad" style="position: absolute;left:28px" ></i>
 			      
-		          <span>游戏</span>
+		          <span>随笔</span>
                   </a>
                 </li>
               
@@ -615,6 +615,8 @@
                         showCursor: true
                     });
                 </script>
+<!-- 添加每日诗词 --> <span id="jinrishici-sentence">分享热爱，音乐，编程，总结经验和生活</span> <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
                 
             </div>
         </div>
@@ -645,46 +647,10 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="快捷键: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="快捷键" style="background-color: #F9EBEA;">快捷键
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%8F%90%E5%8D%87%E6%95%88%E7%8E%87/" title="提升效率: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="提升效率" style="background-color: #F5EEF8;">提升效率
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/hexo/" title="hexo: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="hexo" style="background-color: #D5F5E3;">hexo
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="云服务器: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="云服务器" style="background-color: #E8F8F5;">云服务器
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/java/" title="java: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="java" style="background-color: #FEF9E7;">java
+                            data-tagname="java" style="background-color: #F9EBEA;">java
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -693,7 +659,7 @@
                 <a href="/tags/mybatis/" title="mybatis: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
-                            data-tagname="mybatis" style="background-color: #F8F9F9;">mybatis
+                            data-tagname="mybatis" style="background-color: #F5EEF8;">mybatis
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -702,7 +668,25 @@
                 <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="数据库" style="background-color: #82E0AA;">数据库
+                            data-tagname="数据库" style="background-color: #D5F5E3;">数据库
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="快捷键: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="快捷键" style="background-color: #E8F8F5;">快捷键
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%8F%90%E5%8D%87%E6%95%88%E7%8E%87/" title="提升效率: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="提升效率" style="background-color: #FEF9E7;">提升效率
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -711,7 +695,7 @@
                 <a href="/tags/%E9%9A%8F%E7%AC%94/" title="随笔: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="随笔" style="background-color: #D7BDE2;">随笔
+                            data-tagname="随笔" style="background-color: #F8F9F9;">随笔
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -720,7 +704,25 @@
                 <a href="/tags/%E6%84%9F%E6%82%9F/" title="感悟: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="感悟" style="background-color: #A3E4D7;">感悟
+                            data-tagname="感悟" style="background-color: #82E0AA;">感悟
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/hexo/" title="hexo: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="hexo" style="background-color: #D7BDE2;">hexo
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="云服务器: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="云服务器" style="background-color: #A3E4D7;">云服务器
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -1107,4 +1109,32 @@ $(function () {
 
 <!-- 春节主题 小挂件 --> <div class="caishendeng"> <div class="caishenxian"> <img class="caishenpic lala" src="https://nekodeng.gitee.io/medias/spring-img/caishen.png"> </div> </div>
 
+<div id="weather-v2-plugin-simple"></div>
+<script>
+WIDGET = {
+  CONFIG: {
+    "modules": "01234",
+    "background": 1,
+    "tmpColor": "FFFFFF",
+    "tmpSize": 16,
+    "cityColor": "FFFFFF",
+    "citySize": 16,
+    "aqiSize": 16,
+    "weatherIconSize": 24,
+    "alertIconSize": 18,
+    "padding": "10px 10px 10px 10px",
+    "shadow": "1",
+    "language": "zh",
+    "borderRadius": "50",
+    "city": "CN101260112",
+    "fixed": "true",
+    "vertical": "middle",
+    "horizontal": "center",
+    "left": 10,
+    "top": 10,
+    "key": "Yhx9rUkd9P"
+  }
+}
+</script>
+<script src="https://apip.weatherdt.com/simple/static/js/weather-simple-common.js?v=2.0"></script>
 </html>
