@@ -1,4 +1,152 @@
-<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="utf-8"><meta name="keywords" content="前端,java,linux等"><meta name="description" content="分享热爱，音乐，编程，总结经验和生活"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="renderer" content="webkit|ie-stand|ie-comp"><meta name="mobile-web-app-capable" content="yes"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>CodeCheng</title><link rel="icon" type="image/png" href="/favicon.png"><link rel="stylesheet" href="/libs/awesome/css/all.css"><link rel="stylesheet" href="/libs/materialize/materialize.min.css"><link rel="stylesheet" href="/libs/aos/aos.css"><link rel="stylesheet" href="/libs/animate/animate.min.css"><link rel="stylesheet" href="/libs/lightGallery/css/lightgallery.min.css"><link rel="stylesheet" href="/css/matery.css"><link rel="stylesheet" href="/css/my.css"><script src="/libs/jquery/jquery.min.js"></script><script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script><style lang="css">#loading-container{position:fixed;top:0;left:0;min-height:100vh;width:100vw;z-index:9999;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#fff;text-align:center;-webkit-transition:opacity 1s ease;-moz-transition:opacity 1s ease;-o-transition:opacity 1s ease;transition:opacity 1s ease}.loading-image{width:120px;height:50px;transform:translate(-50%)}.loading-image div:nth-child(2){-webkit-animation:pacman-balls 1s linear 0s infinite;animation:pacman-balls 1s linear 0s infinite}.loading-image div:nth-child(3){-webkit-animation:pacman-balls 1s linear .33s infinite;animation:pacman-balls 1s linear .33s infinite}.loading-image div:nth-child(4){-webkit-animation:pacman-balls 1s linear .66s infinite;animation:pacman-balls 1s linear .66s infinite}.loading-image div:nth-child(5){-webkit-animation:pacman-balls 1s linear .99s infinite;animation:pacman-balls 1s linear .99s infinite}.loading-image div:first-of-type{width:0;height:0;border:25px solid #49b1f5;border-right-color:transparent;border-radius:25px;-webkit-animation:rotate_pacman_half_up .5s 0s infinite;animation:rotate_pacman_half_up .5s 0s infinite}.loading-image div:nth-child(2){width:0;height:0;border:25px solid #49b1f5;border-right-color:transparent;border-radius:25px;-webkit-animation:rotate_pacman_half_down .5s 0s infinite;animation:rotate_pacman_half_down .5s 0s infinite;margin-top:-50px}@-webkit-keyframes rotate_pacman_half_up{0%{transform:rotate(270deg)}50%{transform:rotate(1turn)}to{transform:rotate(270deg)}}@keyframes rotate_pacman_half_up{0%{transform:rotate(270deg)}50%{transform:rotate(1turn)}to{transform:rotate(270deg)}}@-webkit-keyframes rotate_pacman_half_down{0%{transform:rotate(90deg)}50%{transform:rotate(0)}to{transform:rotate(90deg)}}@keyframes rotate_pacman_half_down{0%{transform:rotate(90deg)}50%{transform:rotate(0)}to{transform:rotate(90deg)}}@-webkit-keyframes pacman-balls{75%{opacity:.7}to{transform:translate(-100px,-6.25px)}}@keyframes pacman-balls{75%{opacity:.7}to{transform:translate(-100px,-6.25px)}}.loading-image div:nth-child(3),.loading-image div:nth-child(4),.loading-image div:nth-child(5),.loading-image div:nth-child(6){background-color:#49b1f5;width:15px;height:15px;border-radius:100%;margin:2px;width:10px;height:10px;position:absolute;transform:translateY(-6.25px);top:25px;left:100px}.loading-text{margin-bottom:20vh;text-align:center;color:#2c3e50;font-size:2rem;box-sizing:border-box;padding:0 10px;text-shadow:0 2px 10px rgba(0,0,0,.2)}@media only screen and (max-width:500px){.loading-text{font-size:1.5rem}}.fadeout{opacity:0}@-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}@keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0)}}</style><script>(function () {
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="前端,java,linux等">
+    <meta name="description" content="分享热爱，音乐，编程，总结经验和生活">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>CodeCheng</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
     const loaded = function(){
        setTimeout(function(){
             const loader = document.getElementById("loading-container");
@@ -10,7 +158,592 @@
         },1000);//强制显示loading page 1s  
     };
     loaded();
-})()</script><meta name="generator" content="Hexo 5.4.0"><style>.github-emoji{position:relative;display:inline-block;width:1.2em;min-height:1.2em;overflow:hidden;vertical-align:top;color:transparent}.github-emoji>span{position:relative;z-index:10}.github-emoji .fancybox,.github-emoji img{margin:0!important;padding:0!important;border:none!important;outline:0!important;text-decoration:none!important;user-select:none!important;cursor:auto!important}.github-emoji img{height:1.2em!important;width:1.2em!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;user-select:none!important;cursor:auto!important}.github-emoji-fallback{color:inherit}.github-emoji-fallback img{opacity:0!important}</style><link rel="alternate" href="/atom.xml" title="CodeCheng" type="application/atom+xml"><link rel="stylesheet" href="/css/prism-tomorrow.css"><link rel="stylesheet" href="/css/prism-line-numbers.css"></head><script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script><script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script><script>fetch("https://v1.hitokoto.cn").then(function(t){return t.json()}).then(function(t){document.getElementById("hitokoto").innerText=t.hitokoto+"——【"+t.from+"】"}).catch(function(t){console.error(t)})</script><script>"1"===localStorage.getItem("dark")?document.body.classList.add("dark"):22<=(new Date).getHours()||(new Date).getHours()<7?document.body.classList.add("dark"):matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><a onclick="switchNightMode()" id="sma"><i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i></a><script src="/js/click_show_text.js"></script><div id="loading-container"><p class="loading-text">玩命加载中 . . .</p><div class="loading-image"><div></div><div></div><div></div><div></div><div></div></div></div><body><header class="navbar-fixed"><nav id="headNav" class="bg-color nav-transparent"><div id="navContainer" class="nav-wrapper container"><div class="brand-logo"><a href="/" class="waves-effect waves-light"><img src="/medias/logo.png" class="logo-img" alt="LOGO"> <span class="logo-span">CodeCheng</span></a></div><a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a><ul class="right nav-menu"><li class="hide-on-med-and-down nav-item"><a href="/" class="waves-effect waves-light"><i class="fas fa-home" style="zoom:.6"></i> <span>首页</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/tags" class="waves-effect waves-light"><i class="fas fa-tags" style="zoom:.6"></i> <span>标签</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/categories" class="waves-effect waves-light"><i class="fas fa-bookmark" style="zoom:.6"></i> <span>分类</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/archives" class="waves-effect waves-light"><i class="fas fa-archive" style="zoom:.6"></i> <span>归档</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/about" class="waves-effect waves-light"><i class="fas fa-user-circle" style="zoom:.6"></i> <span>关于</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/contact" class="waves-effect waves-light"><i class="fas fa-comments" style="zoom:.6"></i> <span>留言板</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/friends" class="waves-effect waves-light"><i class="fas fa-address-book" style="zoom:.6"></i> <span>友情链接</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/" class="waves-effect waves-light"><i class="fas fa-list" style="zoom:.6"></i> <span>一些兴趣</span><i class="fas fa-chevron-down" aria-hidden="true" style="zoom:.6"></i></a><ul class="sub-nav menus_item_child"><li><a href="/xsp"><i class="fas fa-film" style="margin-top:-20px;zoom:.6"></i> <span>我的视频</span></a></li><li><a href="/books"><i class="fas fa-book" style="margin-top:-20px;zoom:.6"></i> <span>书单</span></a></li></ul></li><li class="hide-on-med-and-down nav-item"><a href="/navigate" class="waves-effect waves-light"><i class="fas fa-location-arrow" style="zoom:.6"></i> <span>快捷导航</span></a></li><li><a href="#searchModal" class="modal-trigger waves-effect waves-light"><i id="searchIcon" class="fas fa-search" title="搜索" style="zoom:.85"></i></a></li></ul><div id="mobile-nav" class="side-nav sidenav"><div class="mobile-head bg-color"><img src="/medias/logo.png" class="logo-img circle responsive-img"><div class="logo-name">CodeCheng</div><div class="logo-desc">分享热爱，音乐，编程，总结经验和生活</div></div><ul class="menu-list mobile-menu-list"><li class="m-nav-item"><a href="/" class="waves-effect waves-light"><i class="fa-fw fas fa-home"></i> 首页</a></li><li class="m-nav-item"><a href="/tags" class="waves-effect waves-light"><i class="fa-fw fas fa-tags"></i> 标签</a></li><li class="m-nav-item"><a href="/categories" class="waves-effect waves-light"><i class="fa-fw fas fa-bookmark"></i> 分类</a></li><li class="m-nav-item"><a href="/archives" class="waves-effect waves-light"><i class="fa-fw fas fa-archive"></i> 归档</a></li><li class="m-nav-item"><a href="/about" class="waves-effect waves-light"><i class="fa-fw fas fa-user-circle"></i> 关于</a></li><li class="m-nav-item"><a href="/contact" class="waves-effect waves-light"><i class="fa-fw fas fa-comments"></i> 留言板</a></li><li class="m-nav-item"><a href="/friends" class="waves-effect waves-light"><i class="fa-fw fas fa-address-book"></i> 友情链接</a></li><li class="m-nav-item"><a href="javascript:;"><i class="fa-fw fas fa-list"></i> 一些兴趣<span class="m-icon"><i class="fas fa-chevron-right"></i></span></a><ul><li><a href="/xsp" style="margin-left:50px"><i class="fa fas fa-film" style="position:absolute;left:28px"></i> <span>我的视频</span></a></li><li><a href="/books" style="margin-left:50px"><i class="fa fas fa-book" style="position:absolute;left:28px"></i> <span>书单</span></a></li></ul></li><li class="m-nav-item"><a href="/navigate" class="waves-effect waves-light"><i class="fa-fw fas fa-location-arrow"></i> 快捷导航</a></li></ul></div></div></nav></header><style>.carousel-control{width:45px;height:45px;line-height:55px;border-radius:45px;background:0 0;cursor:pointer;z-index:100}#prev-cover{position:absolute;top:48%;left:8px}#next-cover{position:absolute;top:48%;right:8px}#prev-cover i{margin-right:3px}#next-cover i{margin-left:3px}.carousel-control:hover{background-color:rgba(0,0,0,.4)}.carousel-control i{color:#fff;font-size:2.4rem}</style><div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top:-64px"><div id="prev-cover" class="left waves-effect carousel-control"><i class="icon fa fa-angle-left"></i></div><div id="next-cover" class="right waves-effect carousel-control"><i class="icon fa fa-angle-right"></i></div><div class="carousel-item red white-text bg-cover about-cover"><div class="container"><div class="row"><div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2"><div class="brand"><div class="title center-align">小Dai♥周周</div><div class="description center-align"><span id="subtitle"></span><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script><script>var typed=new Typed("#subtitle",{strings:["心脏又不在中间","对你偏心怎么了"],startDelay:300,typeSpeed:100,loop:!0,backSpeed:50,showCursor:!0})</script></div></div></div></div><script>var bannerUrl="/medias/banner/"+(new Date).getDay()+".webp";$(".bg-cover").css("background-image","url("+bannerUrl+")")</script><div class="cover-btns"><a href="#indexCard" class="waves-effect waves-light btn"><i class="fa fa-angle-double-down"></i> 开始阅读</a><a href="https://space.bilibili.com/70319039" class="waves-effect waves-light btn" target="_blank"><i class="fab fa fa-bold"></i> 我的b站</a></div><div class="cover-social-link"><a href="https://github.com/Daly2021/Daly2021.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50"><i class="fab fa-github"></i></a><a href="mailto:2574833532@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50"><i class="fas fa-envelope-open"></i></a><a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2574833532" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2574833532" data-position="top" data-delay="50"><i class="fab fa-qq"></i></a><a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50"><i class="fas fa-rss"></i></a><a href="https://space.bilibili.com/70319039" class="tooltipped" target="_blank" data-tooltip="访问我的B站" data-position="top" data-delay="50"><i class="fa fa-github"></i></a></div></div></div><div class="carousel-item amber white-text carousel-post bg-cover" style="background-image:url(/medias/featureimages/7.webp)"><div class="container"><div class="row"><div class="col s10 offset-s1"><div class="title center-align">Mybtis配置</div><div class="description center-align">mybatis 配置详解myatis-config.xml 核心配置文件mybatis-config.xml 包含的内容如下 configuration（配置） properties（属性） settings（设置） typeAliase</div><div class="cover-btns"><a href="/posts/a1d9a8c4.html" class="waves-effect waves-light btn" target="_blank"><i class="icon fa fa-eye fa-fw"></i> 阅读更多</a></div></div></div></div></div><div class="carousel-item amber white-text carousel-post bg-cover" style="background-image:url(/medias/featureimages/21.webp)"><div class="container"><div class="row"><div class="col s10 offset-s1"><div class="title center-align">hexo部署到云服务器</div><div class="description center-align">腾讯云部署hexo一、部署环境与准备1.环境本地Windows10操作系统 腾讯云Cenots7.6服务器 2.准备Hexo 本地博客 腾讯云终端操作 二、云服务器配置Git1.安装依赖库yum install curl-devel exp</div><div class="cover-btns"><a href="/posts/a34f529.html" class="waves-effect waves-light btn" target="_blank"><i class="icon fa fa-eye fa-fw"></i> 阅读更多</a></div></div></div></div></div><div class="carousel-item amber white-text carousel-post bg-cover" style="background-image:url(/medias/featureimages/23.webp)"><div class="container"><div class="row"><div class="col s10 offset-s1"><div class="title center-align">心情随笔</div><div class="description center-align">学会微笑 If not to the sun for smiling, warm is still in the sun there, but we will laugh more confident calm;</div><div class="cover-btns"><a href="/posts/f77810a8.html" class="waves-effect waves-light btn" target="_blank"><i class="icon fa fa-eye fa-fw"></i> 阅读更多</a></div></div></div></div></div></div><script>$(function () {
+})()
+ </script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="CodeCheng" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+<!-- 一言API -->
+<!-- 现代写法，推荐 -->
+<!-- 兼容低版本浏览器 (包括 IE)，可移除 -->
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<!--End-->
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var hitokoto = document.getElementById('hitokoto');
+      hitokoto.innerText = data.hitokoto + '——【' + data.from + '】';
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
+</script>
+
+<script> if (localStorage.getItem('dark') === '1') { document.body.classList.add('dark'); } else if (new Date().getHours() >= 22 || new Date().getHours() < 7) { document.body.classList.add('dark'); } else if (matchMedia('(prefers-color-scheme: dark)').matches) { document.body.classList.add('dark'); } </script> <a onclick="switchNightMode()" id="sma"> <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> </a>
+
+  <!-- 鼠标点击特效  富强民主文明 -->
+    <script src="/js/click_show_text.js"></script>
+
+
+
+ <div id="loading-container">
+     <p class="loading-text">玩命加载中 . . . </p> 
+     <div class="loading-image">
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div> 
+         <div></div>
+     </div>
+ </div><body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">CodeCheng</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>一些兴趣</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/xsp">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>我的视频</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>书单</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/navigate" class="waves-effect waves-light">
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>快捷导航</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">CodeCheng</div>
+        <div class="logo-desc">
+            
+            分享热爱，音乐，编程，总结经验和生活
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			一些兴趣
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/xsp " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:28px" ></i>
+			      
+		          <span>我的视频</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:28px" ></i>
+			      
+		          <span>书单</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/navigate" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-location-arrow"></i>
+			
+			快捷导航
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<style>
+    .carousel-control {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        border-radius: 45px;
+        background: transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    #prev-cover {
+        position: absolute;
+        top: 48%;
+        left: 8px;
+    }
+
+    #next-cover {
+        position: absolute;
+        top: 48%;
+        right: 8px;;
+    }
+
+    #prev-cover i {
+        margin-right: 3px;
+    }
+
+    #next-cover i {
+        margin-left: 3px;
+    }
+
+    .carousel-control:hover {
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .carousel-control i {
+        color: #fff;
+        font-size: 2.4rem;
+    }
+</style>
+
+
+
+<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
+    
+        <div id="prev-cover" class="left waves-effect carousel-control">
+            <i class="icon fa fa-angle-left"></i>
+        </div>
+        <div id="next-cover" class="right waves-effect carousel-control">
+            <i class="icon fa fa-angle-right"></i>
+        </div>
+    
+
+    <div class="carousel-item red white-text bg-cover about-cover">
+        <div class="container">
+            <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                小Dai♥周周
+                
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "心脏又不在中间",
+                            
+                                "对你偏心怎么了",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.webp';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
+
+
+
+            <div class="cover-btns">
+                <a href="#indexCard" class="waves-effect waves-light btn">
+                    <i class="fa fa-angle-double-down"></i>开始阅读
+                </a>
+
+                
+                    <a href="https://space.bilibili.com/70319039" class="waves-effect waves-light btn" target="_blank">
+                        <i class="fab fa fa-bold"></i>我的b站
+                    </a>
+                
+            </div>
+            <div class="cover-social-link">
+    <a href="https://github.com/Daly2021/Daly2021.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2574833532@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2574833532" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2574833532" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+<a href="https://space.bilibili.com/70319039" class="tooltipped" target="_blank" data-tooltip="访问我的B站" data-position="top" data-delay="50"> <i class="fa fa-github"></i> </a>
+
+</div>
+        </div>
+    </div>
+
+    
+        
+
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/7.webp');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">Mybtis配置</div>
+                            <div class="description center-align">
+                                
+                                    mybatis 配置详解myatis-config.xml 核心配置文件mybatis-config.xml 包含的内容如下
+
+configuration（配置）
+properties（属性）
+settings（设置）
+typeAliase
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/posts/a1d9a8c4.html" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/21.webp');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">hexo部署到云服务器</div>
+                            <div class="description center-align">
+                                
+                                    腾讯云部署hexo一、部署环境与准备1.环境本地Windows10操作系统
+腾讯云Cenots7.6服务器
+2.准备Hexo 本地博客
+腾讯云终端操作
+二、云服务器配置Git1.安装依赖库yum install curl-devel exp
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/posts/a34f529.html" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/23.webp');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">心情随笔</div>
+                            <div class="description center-align">
+                                
+                                     
+  学会微笑 
+  
+     
+If not to the sun for smiling, warm is still in the sun there, but we will laugh more confident calm;
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/posts/f77810a8.html" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    
+</div>
+
+<script>
+    $(function () {
         let coverSlider = $('.carousel');
 
         //用户触摸轮播自动 restartPlay 是否生效
@@ -68,4 +801,725 @@
             restartPlay();
         });
         
-    });</script><main class="content"><div id="indexCard" class="index-card"><div class="container"><div class="card"><div class="card-content"><div class="dream"><div class="title center-align"><i class="far fa-lightbulb"></i> &nbsp;&nbsp;余生漫漫，让开心成为一种习惯。</div><div class="row"><div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text"><span id="hitokoto">要有一颗自嘲、宽解的心。要有自己的思想。时时保持一颗童心。记得为自己而活。以自己健康为重。精心呵护自己，让美持久。爱情不是我们的快乐之源和生活的全部。对待伤害你的人，要潇洒地说拜拜。对待消费，不能盲目。不要压抑不良情绪。偶尔让自己透明，不要顾忌他人的评论。对于快乐，我们尽量保持，让它们呆的久一点。余生漫漫，让开心成为一种习惯。开心点吧 -- CodeCheng</span><script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script></div></div><div id="recommend-sections" class="recommend"><div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;推荐文章</div><div class="row"><div class="col s12"><div class="post-card" style="background-image:url(/medias/featureimages/7.webp)"><div class="post-body"><div class="post-categories"><a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category">数据库</a> <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/Mybatis/" class="category">Mybatis</a></div><a href="/posts/a1d9a8c4.html"><h3 class="post-title">Mybtis配置</h3></a><p class="post-description">mybatis 配置详解myatis-config.xml 核心配置文件mybatis-config.xml 包含的内容如下 configuration（配置） pro</p><a href="/posts/a1d9a8c4.html" class="read-more btn waves-effect waves-light" style="background:linear-gradient(to right,#ff5e3a 0,#ff2a68 100%)" target="_blank"><i class="icon far fa-eye fa-fw"></i> 阅读更多</a></div></div></div></div></div></div></div></div></div><article id="articles" class="container articles"><div class="row article-row"><div class="article col s12 m6 l4" data-aos="zoom-in"><div class="card"><a href="/posts/a34f529.html"><div class="card-image"><img src="/medias/featureimages/21.webp" class="responsive-img" alt="hexo部署到云服务器"> <span class="card-title">hexo部署到云服务器</span></div></a><div class="card-content article-content"><div class="summary block-with-text">腾讯云部署hexo一、部署环境与准备1.环境本地Windows10操作系统 腾讯云Cenots7.6服务器 2.准备Hexo 本地博客 腾讯云终端操作 二、云服务器配置Git1.安装依赖库yum install curl-devel exp</div><div class="publish-info"><span class="publish-date"><i class="far fa-clock fa-fw icon-date"></i> 2021-03-15</span><span class="publish-author"><i class="fas fa-bookmark fa-fw icon-category"></i> <a href="/categories/Hexo/" class="post-category">Hexo</a> <a href="/categories/Hexo/%E9%83%A8%E7%BD%B2hexo/" class="post-category">部署hexo</a></span></div></div><div class="card-action article-tags"><a href="/tags/hexo/"><span class="chip bg-color">hexo</span></a> <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"><span class="chip bg-color">云服务器</span></a></div></div></div><div class="article col s12 m6 l4" data-aos="zoom-in"><div class="card"><a href="/posts/f77810a8.html"><div class="card-image"><img src="/medias/featureimages/23.webp" class="responsive-img" alt="心情随笔"> <span class="card-title">心情随笔</span></div></a><div class="card-content article-content"><div class="summary block-with-text">学会微笑 If not to the sun for smiling, warm is still in the sun there, but we will laugh more confident calm;</div><div class="publish-info"><span class="publish-date"><i class="far fa-clock fa-fw icon-date"></i> 2021-03-15</span><span class="publish-author"><i class="fas fa-bookmark fa-fw icon-category"></i> <a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/" class="post-category">生活感悟</a> <a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/%E5%88%86%E4%BA%AB/" class="post-category">分享</a></span></div></div><div class="card-action article-tags"><a href="/tags/%E9%9A%8F%E7%AC%94/"><span class="chip bg-color">随笔</span></a> <a href="/tags/%E6%84%9F%E6%82%9F/"><span class="chip bg-color">感悟</span></a></div></div></div><div class="article col s12 m6 l4" data-aos="zoom-in"><div class="card"><a href="/posts/a1d9a8c4.html"><div class="card-image"><img src="/medias/featureimages/7.webp" class="responsive-img" alt="Mybtis配置"> <span class="card-title">Mybtis配置</span></div></a><div class="card-content article-content"><div class="summary block-with-text">mybatis 配置详解myatis-config.xml 核心配置文件mybatis-config.xml 包含的内容如下 configuration（配置） properties（属性） settings（设置） typeAliase</div><div class="publish-info"><span class="publish-date"><i class="far fa-clock fa-fw icon-date"></i> 2021-03-15</span><span class="publish-author"><i class="fas fa-bookmark fa-fw icon-category"></i> <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">数据库</a> <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/Mybatis/" class="post-category">Mybatis</a></span></div></div><div class="card-action article-tags"><a href="/tags/java/"><span class="chip bg-color">java</span></a> <a href="/tags/mybatis/"><span class="chip bg-color">mybatis</span></a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="chip bg-color">数据库</span></a></div></div></div><div class="article col s12 m6 l4" data-aos="zoom-in"><div class="card"><a href="/posts/eef88033.html"><div class="card-image"><img src="/medias/featureimages/7.webp" class="responsive-img" alt="我自己常用windows快捷键"> <span class="card-title">我自己常用windows快捷键</span></div></a><div class="card-content article-content"><div class="summary block-with-text">我自己常用windows快捷键win + win+e 打开文件夹 win+r 打开命令提示符 ex:cmd win+d 打开桌面 win+v 打开剪切板 用来查看历史粘贴 方便粘贴不用来回找 win+i 打开windows设置 win</div><div class="publish-info"><span class="publish-date"><i class="far fa-clock fa-fw icon-date"></i> 2021-02-27</span><span class="publish-author"><i class="fas fa-bookmark fa-fw icon-category"></i> <a href="/categories/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="post-category">常用快捷键</a> <a href="/categories/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/windows/" class="post-category">windows</a></span></div></div><div class="card-action article-tags"><a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"><span class="chip bg-color">快捷键</span></a> <a href="/tags/%E6%8F%90%E5%8D%87%E6%95%88%E7%8E%87/"><span class="chip bg-color">提升效率</span></a></div></div></div></div></article></div></main><script>var st,OriginTitile=document.title;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="看不见我🙈~小Dai不见了🙈~",clearTimeout(st)):(document.title="(๑•̀ㅂ•́) ✧小Dai被发现了～",st=setTimeout(function(){document.title=OriginTitile},3e3))})</script><footer class="page-footer bg-color"><div class="container row center-align" style="margin-bottom:15px!important"><div class="col s12 m8 l8 copy-right">Copyright&nbsp;&copy; <span id="year">2021</span> <span id="year">2021</span> <a href="/about" target="_blank">CodeCheng</a><br>&nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">1.4k</span>&nbsp;字 <span id="busuanzi_container_site_pv">|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv" class="white-color"></span>&nbsp;次</span> <span id="busuanzi_container_site_uv">|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv" class="white-color"></span>&nbsp;人</span><br><span id="sitetime">载入运行时间...</span><script>function siteTime(){var e=36e5,t=24*e,n=new Date,o="2021",r=n.getFullYear(),a=n.getMonth()+1,i=n.getDate(),l=n.getHours(),m=n.getMinutes(),M=n.getSeconds(),g=Date.UTC(o,"2","24","0","0","0"),d=Date.UTC(r,a,i,l,m,M)-g,s=Math.floor(d/31536e6),u=Math.floor(d/t-365*s),T=Math.floor((d-(365*s+u)*t)/e),c=Math.floor((d-(365*s+u)*t-T*e)/6e4),f=Math.floor((d-(365*s+u)*t-T*e-6e4*c)/1e3);o==r?(document.getElementById("year").innerHTML=r,document.getElementById("sitetime").innerHTML="本站已安全运行 "+u+" 天 "+T+" 小时 "+c+" 分钟 "+f+" 秒"):(document.getElementById("year").innerHTML=o+" - "+r,document.getElementById("sitetime").innerHTML="本站已安全运行 "+s+" 年 "+u+" 天 "+T+" 小时 "+c+" 分钟 "+f+" 秒")}setInterval(siteTime,1e3)</script><br><span id="icp"><img src="/medias/icp.png" style="vertical-align:text-bottom"> <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">2021001761号</a></span></div><div class="col s12 m4 l4 social-link social-statis"><a href="https://github.com/Daly2021/Daly2021.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50"><i class="fab fa-github"></i></a><a href="mailto:2574833532@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50"><i class="fas fa-envelope-open"></i></a><a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2574833532" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2574833532" data-position="top" data-delay="50"><i class="fab fa-qq"></i></a><a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50"><i class="fas fa-rss"></i></a><a href="https://space.bilibili.com/70319039" class="tooltipped" target="_blank" data-tooltip="访问我的B站" data-position="top" data-delay="50"><i class="fa fa-github"></i></a></div></div></footer><div class="progress-bar"></div><div class="deng-box"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t">小Dai</div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div><div class="deng-box1"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t">小周</div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div><div id="searchModal" class="modal"><div class="modal-content"><div class="search-header"><span class="title"><i class="fas fa-search"></i> &nbsp;&nbsp;搜索</span> <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input"></div><div id="searchResult"></div></div></div><script>$(function(){!function(t,a,s){"use strict";$.ajax({url:t,dataType:"xml",success:function(t){var e=$("entry",t).map(function(){return{title:$("title",this).text(),content:$("content",this).text(),url:$("url",this).text()}}).get(),r=document.getElementById(a),n=document.getElementById(s);r.addEventListener("input",function(){var f='<ul class="search-result-list">',m=this.value.trim().toLowerCase().split(/[\s\-]+/);n.innerHTML="",this.value.trim().length<=0||(e.forEach(function(t){var r=!0,n=t.title.trim().toLowerCase(),a=t.content.trim().replace(/<[^>]+>/g,"").toLowerCase(),e=t.url;e=0===e.indexOf("/")?t.url:"/"+e;var s=-1,i=-1,l=-1;if(""!==n&&""!==a&&m.forEach(function(t,e){s=n.indexOf(t),i=a.indexOf(t),s<0&&i<0?r=!1:(i<0&&(i=0),0===e&&(l=i))}),r){f+="<li><a href='"+e+"' class='search-result-title'>"+n+"</a>";var c=t.content.trim().replace(/<[^>]+>/g,"");if(0<=l){var u=l-20,o=l+80;u<0&&(u=0),0===u&&(o=100),o>c.length&&(o=c.length);var h=c.substr(u,o);m.forEach(function(t){var e=new RegExp(t,"gi");h=h.replace(e,'<em class="search-keyword">'+t+"</em>")}),f+='<p class="search-result">'+h+"...</p>"}f+="</li>"}}),f+="</ul>",n.innerHTML=f)})}})}("/search.xml","searchInput","searchResult")})</script><div id="backTop" class="top-scroll"><a class="btn-floating btn-large waves-effect waves-light" href="#!"><i class="fas fa-arrow-up"></i></a></div><script src="/libs/materialize/materialize.min.js"></script><script src="/libs/masonry/masonry.pkgd.min.js"></script><script src="/libs/aos/aos.js"></script><script src="/libs/scrollprogress/scrollProgress.min.js"></script><script src="/libs/lightGallery/js/lightgallery-all.min.js"></script><script src="/js/matery.js"></script><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><script src="/libs/others/clicklove.js" async></script><script async src="/libs/others/busuanzi.pure.mini.js"></script><script color="52,172,219" pointcolor="198,84,189" opacity="1" zindex="-2" count="300" src="/libs/background/canvas-nest.js"></script><script size="150" alpha="0.6" zindex="-2" src="/libs/background/ribbon-refresh.min.js" async></script><script src="/libs/background/ribbon-dynamic.js" async></script><script src="/libs/instantpage/instantpage.js" type="module"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({pluginRootPath:"live2dw/",pluginJsPath:"lib/",pluginModelPath:"assets/",tagMode:!1,debug:!1,model:{jsonPath:"/live2dw/assets/tororo.model.json"},display:{position:"right",width:300,height:325},mobile:{show:!0},log:!1})</script></body><div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div><script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script><script async src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/snow.min.js"></script><div id="weather-v2-plugin-simple"></div><script>WIDGET={CONFIG:{modules:"01234",background:1,tmpColor:"FFFFFF",tmpSize:16,cityColor:"FFFFFF",citySize:16,aqiSize:16,weatherIconSize:24,alertIconSize:18,padding:"10px 10px 10px 10px",shadow:"1",language:"zh",borderRadius:"50",city:"CN101260112",fixed:"true",vertical:"middle",horizontal:"center",left:10,top:10,key:"Yhx9rUkd9P"}}</script><script src="https://apip.weatherdt.com/simple/static/js/weather-simple-common.js?v=2.0"></script></html><script>"1"===localStorage.getItem("dark")?document.body.classList.add("dark"):22<=(new Date).getHours()||(new Date).getHours()<7?document.body.classList.add("dark"):matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><a onclick="switchNightMode()" id="sma"><i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i></a>
+    });
+</script>
+
+
+
+<main class="content">
+
+    
+    <div id="indexCard" class="index-card">
+        <div class="container ">
+            <div class="card">
+                <div class="card-content">
+                    
+                        <div class="dream">
+    
+    <div class="title center-align">
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;余生漫漫，让开心成为一种习惯。
+    </div>
+    
+    <div class="row"> <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text"> <!-- 原数据要有一颗自嘲、宽解的心。要有自己的思想。时时保持一颗童心。记得为自己而活。以自己健康为重。精心呵护自己，让美持久。爱情不是我们的快乐之源和生活的全部。对待伤害你的人，要潇洒地说拜拜。对待消费，不能盲目。不要压抑不良情绪。偶尔让自己透明，不要顾忌他人的评论。对于快乐，我们尽量保持，让它们呆的久一点。余生漫漫，让开心成为一种习惯。开心点吧 -- CodeCheng --> <!-- 设置格言自动更新 --> <span id="hitokoto">要有一颗自嘲、宽解的心。要有自己的思想。时时保持一颗童心。记得为自己而活。以自己健康为重。精心呵护自己，让美持久。爱情不是我们的快乐之源和生活的全部。对待伤害你的人，要潇洒地说拜拜。对待消费，不能盲目。不要压抑不良情绪。偶尔让自己透明，不要顾忌他人的评论。对于快乐，我们尽量保持，让它们呆的久一点。余生漫漫，让开心成为一种习惯。开心点吧 -- CodeCheng</span> <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script> </div>
+
+</div>
+
+                    
+
+                    
+
+                    
+
+                    
+                    <div id="recommend-sections" class="recommend">
+                        
+
+
+
+
+
+<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;推荐文章</div>
+
+<div class="row">
+
+    
+    
+    <div class="col s12" >
+        
+            <div class="post-card" style="background-image: url('/medias/featureimages/7.webp')">
+            
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category">数据库</a>
+                        
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/Mybatis/" class="category">Mybatis</a>
+                        
+                    
+                </div>
+                <a href="/posts/a1d9a8c4.html">
+                    <h3 class="post-title">Mybtis配置</h3>
+                </a>
+                <p class="post-description">mybatis 配置详解myatis-config.xml 核心配置文件mybatis-config.xml 包含的内容如下
+
+configuration（配置）
+pro</p>
+                <a href="/posts/a1d9a8c4.html" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    <!-- 所有文章卡片 -->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/a34f529.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/21.webp" class="responsive-img" alt="hexo部署到云服务器">
+                            
+                            <span class="card-title">hexo部署到云服务器</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                腾讯云部署hexo一、部署环境与准备1.环境本地Windows10操作系统
+腾讯云Cenots7.6服务器
+2.准备Hexo 本地博客
+腾讯云终端操作
+二、云服务器配置Git1.安装依赖库yum install curl-devel exp
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-15
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Hexo/" class="post-category">
+                                    Hexo
+                                </a>
+                                
+                                <a href="/categories/Hexo/%E9%83%A8%E7%BD%B2hexo/" class="post-category">
+                                    部署hexo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/hexo/">
+                            <span class="chip bg-color">hexo</span>
+                        </a>
+                        
+                        <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                            <span class="chip bg-color">云服务器</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/f77810a8.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/23.webp" class="responsive-img" alt="心情随笔">
+                            
+                            <span class="card-title">心情随笔</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                 
+  学会微笑 
+  
+     
+If not to the sun for smiling, warm is still in the sun there, but we will laugh more confident calm;
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-15
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/" class="post-category">
+                                    生活感悟
+                                </a>
+                                
+                                <a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/%E5%88%86%E4%BA%AB/" class="post-category">
+                                    分享
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                            <span class="chip bg-color">随笔</span>
+                        </a>
+                        
+                        <a href="/tags/%E6%84%9F%E6%82%9F/">
+                            <span class="chip bg-color">感悟</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/a1d9a8c4.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/7.webp" class="responsive-img" alt="Mybtis配置">
+                            
+                            <span class="card-title">Mybtis配置</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                mybatis 配置详解myatis-config.xml 核心配置文件mybatis-config.xml 包含的内容如下
+
+configuration（配置）
+properties（属性）
+settings（设置）
+typeAliase
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-15
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
+                                </a>
+                                
+                                <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/Mybatis/" class="post-category">
+                                    Mybatis
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/java/">
+                            <span class="chip bg-color">java</span>
+                        </a>
+                        
+                        <a href="/tags/mybatis/">
+                            <span class="chip bg-color">mybatis</span>
+                        </a>
+                        
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                            <span class="chip bg-color">数据库</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/eef88033.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/7.webp" class="responsive-img" alt="我自己常用windows快捷键">
+                            
+                            <span class="card-title">我自己常用windows快捷键</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                我自己常用windows快捷键win +
+win+e 打开文件夹
+win+r 打开命令提示符 ex:cmd 
+win+d 打开桌面
+win+v 打开剪切板  用来查看历史粘贴  方便粘贴不用来回找
+win+i 打开windows设置
+win
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-27
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="post-category">
+                                    常用快捷键
+                                </a>
+                                
+                                <a href="/categories/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/windows/" class="post-category">
+                                    windows
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+                            <span class="chip bg-color">快捷键</span>
+                        </a>
+                        
+                        <a href="/tags/%E6%8F%90%E5%8D%87%E6%95%88%E7%8E%87/">
+                            <span class="chip bg-color">提升效率</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
+
+</main>
+
+
+
+
+<script type="text/javascript">
+    var OriginTitile = document.title,
+        st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ? (document.title = "看不见我🙈~小Dai不见了🙈~", clearTimeout(st)) : (document.title =
+            "(๑•̀ㅂ•́) ✧小Dai被发现了～", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">CodeCheng</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">1.4k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2021";
+                    var startMonth = "2";
+                    var startDate = "24";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">2021001761号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Daly2021/Daly2021.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2574833532@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2574833532" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2574833532" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+<a href="https://space.bilibili.com/70319039" class="tooltipped" target="_blank" data-tooltip="访问我的B站" data-position="top" data-delay="50"> <i class="fa fa-github"></i> </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 灯笼1 -->
+<div class="deng-box">
+        <div class="deng">
+                <div class="xian"></div>
+                <div class="deng-a">
+                        <div class="deng-b"><div class="deng-t">小Dai</div></div>
+                </div>
+                <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+        </div>
+</div>
+ 
+<!-- 灯笼2 -->
+<div class="deng-box1">
+        <div class="deng">
+                <div class="xian"></div>
+                <div class="deng-a">
+                        <div class="deng-b"><div class="deng-t">小周</div></div>
+                </div>
+                <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+        </div>
+</div>
+
+ 
+
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="52,172,219"
+        pointColor="198,84,189" opacity='1'
+        zIndex="-2" count="300"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-2" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":300,"height":325},"mobile":{"show":true},"log":false});</script></body>
+<div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
+    <script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/snow.min.js"></script>
+
+
+<div id="weather-v2-plugin-simple"></div>
+<script>
+WIDGET = {
+  CONFIG: {
+    "modules": "01234",
+    "background": 1,
+    "tmpColor": "FFFFFF",
+    "tmpSize": 16,
+    "cityColor": "FFFFFF",
+    "citySize": 16,
+    "aqiSize": 16,
+    "weatherIconSize": 24,
+    "alertIconSize": 18,
+    "padding": "10px 10px 10px 10px",
+    "shadow": "1",
+    "language": "zh",
+    "borderRadius": "50",
+    "city": "CN101260112",
+    "fixed": "true",
+    "vertical": "middle",
+    "horizontal": "center",
+    "left": 10,
+    "top": 10,
+    "key": "Yhx9rUkd9P"
+  }
+}
+</script>
+<script src="https://apip.weatherdt.com/simple/static/js/weather-simple-common.js?v=2.0"></script>
+</html>
+
+<script> if (localStorage.getItem('dark') === '1') { document.body.classList.add('dark'); } else if (new Date().getHours() >= 22 || new Date().getHours() < 7) { document.body.classList.add('dark'); } else if (matchMedia('(prefers-color-scheme: dark)').matches) { document.body.classList.add('dark'); } </script> <a onclick="switchNightMode()" id="sma"> <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> </a>
+
