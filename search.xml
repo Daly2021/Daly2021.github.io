@@ -37,14 +37,14 @@
       <link href="posts/f77810a8.html"/>
       <url>posts/f77810a8.html</url>
       
-        <content type="html"><![CDATA[<div class="ipage">   <div class="ititle">学会微笑</div>   <div class="izhengwen">    <p> If not to the sun for smiling, warm is still in the sun there, but we will laugh more confident calm; 如果不是太阳微笑，温暖仍然在阳光下，但我们会笑得更加自信; </p>     <p>if turned to found his own shadow, appropriate escape, the sun will be through the heart,warm each place behind the corner;     如果转向发现自己的影子，适当的逃脱，太阳将通过心脏，温暖在角落后面的每个地方;</p>     <p>if an outstretched palm cannot fall butterfly, then clenched waving arms, given power; 如果一个伸出的棕榈不能落下蝴蝶，那就握紧挥动臂，给予功率;</p>     <p>if I cant have bright smile, it will face to the sunshine, and sunshine smile togeth如果我不能微笑，它将面对阳光，阳光微笑到可见 </p>     <p>人生忽如寄，莫辜负茶、汤、好天气。                                                         ------codecheng    </p>             </div> </div>]]></content>
+        <content type="html"><![CDATA[<div class="ipage">   <div class="ititle">学会微笑</div>   <div class="izhengwen">    <p> If not to the sun for smiling, warm is still in the sun there, but we will laugh more confident calm; 如果不是太阳微笑，温暖仍然在阳光下，但我们会笑得更加自信; </p>     <p>if turned to found his own shadow, appropriate escape, the sun will be through the heart,warm each place behind the corner;     如果转向发现自己的影子，适当的逃脱，太阳将通过心脏，温暖在角落后面的每个地方;</p>     <p>if an outstretched palm cannot fall butterfly, then clenched waving arms, given power; 如果一个伸出的棕榈不能落下蝴蝶，那就握紧挥动臂，给予功率;</p>     <p>if I cant have bright smile, it will face to the sunshine, and sunshine smile togeth如果我不能微笑，它将面对阳光，阳光微笑到可见 </p>     <p>人生忽如寄，莫辜负茶、汤、好天气。                                                         ------codecheng    </p>  </div> </div>]]></content>
       
       
       <categories>
           
           <category> 生活感悟 </category>
           
-          <category> 分享 </category>
+          <category> 随笔 </category>
           
       </categories>
       
@@ -54,66 +54,6 @@
             <tag> 随笔 </tag>
             
             <tag> 感悟 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Mybtis配置</title>
-      <link href="posts/a1d9a8c4.html"/>
-      <url>posts/a1d9a8c4.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="mybatis-配置详解"><a href="#mybatis-配置详解" class="headerlink" title="mybatis 配置详解"></a>mybatis 配置详解</h1><h2 id="myatis-config-xml-核心配置文件"><a href="#myatis-config-xml-核心配置文件" class="headerlink" title="myatis-config.xml 核心配置文件"></a>myatis-config.xml 核心配置文件</h2><p>mybatis-config.xml 包含的内容如下</p><ul><li>configuration（配置）</li><li>properties（属性）</li><li>settings（设置）</li><li>typeAliases（类型别名）</li><li>typeHandlers（类型处理器）</li><li>objectFactory（对象工厂）</li><li>plugins（插件）</li><li>environments（环境配置）</li><li>environment（环境变量）</li><li>transactionManager（事务管理器）</li><li>dataSource（数据源）</li><li>databaseIdProvider（数据库厂商标识）</li><li>mappers（映射器）</li></ul><p><strong>注意元素节点的顺序！顺序不对会报错</strong></p><h3 id="1-environments元素"><a href="#1-environments元素" class="headerlink" title="1. environments元素"></a>1. environments元素</h3><pre class="line-numbers language-none"><code class="language-none">&lt;environments default="development"&gt; &lt;environment id="development"&gt;   &lt;transactionManager type="JDBC"&gt;     &lt;property name="..." value="..."/&gt;   &lt;/transactionManager&gt;   &lt;dataSource type="POOLED"&gt;     &lt;property name="driver" value="$&amp;#123;driver&amp;#125;"/&gt;     &lt;property name="url" value="$&amp;#123;url&amp;#125;"/&gt;     &lt;property name="username" value="$&amp;#123;username&amp;#125;"/&gt;     &lt;property name="password" value="$&amp;#123;password&amp;#125;"/&gt;   &lt;/dataSource&gt; &lt;/environment&gt; &lt;environment id="test"&gt;   &lt;transactionManager type="JDBC"&gt;     &lt;property name="..." value="..."/&gt;   &lt;/transactionManager&gt;   &lt;dataSource type="POOLED"&gt;     &lt;property name="driver" value="$&amp;#123;driver&amp;#125;"/&gt;     &lt;property name="url" value="$&amp;#123;url&amp;#125;"/&gt;     &lt;property name="username" value="$&amp;#123;username&amp;#125;"/&gt;     &lt;property name="password" value="$&amp;#123;password&amp;#125;"/&gt;   &lt;/dataSource&gt; &lt;/environment&gt;&lt;/environments&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li><p>environments配置mybatis 多套环境，将sql 映射到多个不同的数据库上，必须指定一个默认环境，即default=”development”</p><h4 id="1-1-子元素environment"><a href="#1-1-子元素environment" class="headerlink" title="1.1 子元素environment"></a>1.1 子元素environment</h4></li></ul><p>其中dataSource 数据源（共三种内建的数据源类型）</p><pre class="line-numbers language-java" data-language="java"><code class="language-java">type="[UNPOOLED|POOLED|JNDI]"）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>unpooled：这个数据源的实现只是每次被请求时打开和关闭连接</li><li><strong>pooled：这种数据源的实现利用“池”的概念将 JDBC 连接对象组织起来 , 这是一种使得并发 Web 应用快速响应请求的流行处理方式。</strong></li><li>jndi：这个数据源的实现是为了能在如 Spring 或应用服务器这类容器中使用，容器可以集中或在外部配置数据源，然后放置一个 JNDI 上下文的引用。</li></ul><p><strong>注： 数据源也有很多第三方的实现，比如dbcp，c3p0，druid等等….</strong></p><h4 id="1-2-transactionManager-事务管理器（共两种）"><a href="#1-2-transactionManager-事务管理器（共两种）" class="headerlink" title="1.2 transactionManager  事务管理器（共两种）"></a>1.2 transactionManager  事务管理器（共两种）</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java">&lt;transactionManager type="[ JDBC | MANAGED ]"/&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="2-mappers-元素（定义映射SQL语句文件）"><a href="#2-mappers-元素（定义映射SQL语句文件）" class="headerlink" title="2. mappers 元素（定义映射SQL语句文件）"></a>2. mappers 元素（定义映射SQL语句文件）</h3><p><strong>主要用于找到sql语句的文件在哪里？可以使用不同的方式引用sql语句 具体的引用方式如下</strong></p><ul><li><p>使用相对路径引入sql语句的文件</p><pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token comment">&lt;!-- 使用相对于类路径的资源引用 --&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mappers</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span> <span class="token attr-name">resource</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org/mybatis/builder/PostMapper.xml<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mappers</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>使用完全限定资源定位符（URL）</p><pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token comment">&lt;!-- 使用完全限定资源定位符（URL） --&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mappers</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span> <span class="token attr-name">url</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>file:///var/mappers/AuthorMapper.xml<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mappers</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>使用映射器接口实现类的完全限定类名,需要配置文件名称和接口名称一致，并且位于同一目录下</p></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据库 </category>
-          
-          <category> Mybatis </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> java </tag>
-            
-            <tag> mybatis </tag>
-            
-            <tag> 数据库 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>我自己常用windows快捷键</title>
-      <link href="posts/eef88033.html"/>
-      <url>posts/eef88033.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="我自己常用windows快捷键"><a href="#我自己常用windows快捷键" class="headerlink" title="我自己常用windows快捷键"></a>我自己常用windows快捷键</h1><h2 id="win"><a href="#win" class="headerlink" title="win +"></a><strong>win</strong> +</h2><ol><li>win+e 打开文件夹</li><li>win+r 打开命令提示符 ex:cmd </li><li>win+d 打开桌面</li><li>win+v 打开剪切板  用来查看历史粘贴  方便粘贴不用来回找</li><li>win+i 打开windows设置</li><li>win + 数字 打开应用程序 快速定位 跟win+t配合使用 按几就代开第几个应用</li><li>win + l 锁屏</li><li>win+t在底部工具栏切换应用程序</li><li>win+上下左右方向键    调节左右窗口 不用自己调整  左右（位置） 上下（放大缩小）</li><li>win+u打开设置主页 可以调整屏幕大小</li><li>win+q打开Windows搜索</li></ol><h1 id="有意思的快捷键也是常用的"><a href="#有意思的快捷键也是常用的" class="headerlink" title="有意思的快捷键也是常用的"></a>有意思的快捷键也是常用的</h1><ol><li>例如<strong>重命名</strong>直接f2 或者fn+f2</li><li>tab键盘  不止缩进  还可以回来shift+tab 直接回来</li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 常用快捷键 </category>
-          
-          <category> windows </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 快捷键 </tag>
-            
-            <tag> 提升效率 </tag>
             
         </tags>
       
