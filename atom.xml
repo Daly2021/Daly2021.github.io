@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>CodeCheng</title>
   
-  <subtitle>爱到卑微，低至尘埃</subtitle>
+  <subtitle>不曾犯错的人生，义无反顾的坠落</subtitle>
   <link href="https://www.codecheng.com/atom.xml" rel="self"/>
   
   <link href="https://www.codecheng.com/"/>
-  <updated>2021-03-20T12:02:57.503Z</updated>
+  <updated>2021-03-20T14:25:27.326Z</updated>
   <id>https://www.codecheng.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一首小诗，你可否愿意像我一样</title>
+    <link href="https://www.codecheng.com/posts/a642e0de.html"/>
+    <id>https://www.codecheng.com/posts/a642e0de.html</id>
+    <published>2021-03-20T13:29:18.000Z</published>
+    <updated>2021-03-20T14:25:27.326Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;ipage&quot;&gt; 
+&lt;div class=&quot;ititle&quot;&gt;你可否愿意像我一样&lt;br&gt;
+  &lt;span style=&quot;align=right; color:#0093E9;font-size:18px;&quot;&gt;-----CodeCheng&lt;/span&gt;
+ </summary>
+        
+      
+    
+    
+    
+    <category term="随笔" scheme="https://www.codecheng.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="心情" scheme="https://www.codecheng.com/categories/%E9%9A%8F%E7%AC%94/%E5%BF%83%E6%83%85/"/>
+    
+    
+    <category term="随笔" scheme="https://www.codecheng.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="心情" scheme="https://www.codecheng.com/tags/%E5%BF%83%E6%83%85/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo部署到云服务器</title>
@@ -50,7 +82,7 @@
     <link href="https://www.codecheng.com/posts/f77810a8.html"/>
     <id>https://www.codecheng.com/posts/f77810a8.html</id>
     <published>2021-03-15T04:26:55.000Z</published>
-    <updated>2021-03-20T11:58:38.816Z</updated>
+    <updated>2021-03-20T13:37:03.812Z</updated>
     
     
       
