@@ -6,7 +6,7 @@
   <link href="https://www.codecheng.com/atom.xml" rel="self"/>
   
   <link href="https://www.codecheng.com/"/>
-  <updated>2021-03-23T14:42:55.971Z</updated>
+  <updated>2021-03-30T13:53:19.313Z</updated>
   <id>https://www.codecheng.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>读书笔记</title>
+    <link href="https://www.codecheng.com/posts/7b67faab.html"/>
+    <id>https://www.codecheng.com/posts/7b67faab.html</id>
+    <published>2021-03-30T13:41:02.000Z</published>
+    <updated>2021-03-30T13:53:19.313Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;叔本华人生的智慧读书笔记&quot;&gt;&lt;a href=&quot;#叔本华人生的智慧读书笔记&quot; class=&quot;headerlink&quot; title=&quot;叔本华人生的智慧读书笔记&quot;&gt;&lt;/a&gt;叔本华人生的智慧读书笔记&lt;/h1&gt;&lt;h2 id=&quot;第一章，基本分类笔记&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="读书笔记" scheme="https://www.codecheng.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="阅读" scheme="https://www.codecheng.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%98%85%E8%AF%BB/"/>
+    
+    
+    <category term="阅读" scheme="https://www.codecheng.com/tags/%E9%98%85%E8%AF%BB/"/>
+    
+    <category term="感悟" scheme="https://www.codecheng.com/tags/%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>maven</title>
