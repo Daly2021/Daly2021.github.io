@@ -1,1 +1,235 @@
-"use strict";!function(e){var a=e("#bg").children("canvas"),n=a[0],o=a[1],i=a[2],x={circle:{amount:18,layer:3,color:[157,97,207],alpha:.3},line:{amount:12,layer:3,color:[255,255,255],alpha:.3},speed:.5,angle:20};if(n.getContext){var q,P,G,r=n.getContext("2d"),k=o.getContext("2d"),T=i.getContext("2d"),z=window.Math,I=x.angle/360*z.PI*2,j=[],L=[];requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame||window.oRequestAnimationFrame||function(e,a){setTimeout(e,1e3/60)},cancelAnimationFrame=window.cancelAnimationFrame||window.mozCancelAnimationFrame||window.webkitCancelAnimationFrame||window.msCancelAnimationFrame||window.oCancelAnimationFrame||clearTimeout;var t=function(){q=e(window).width(),P=e(window).height(),a.each(function(){this.width=q,this.height=P})},l=function e(){var a,n,o,i,r,t,l,d,c,m,s,u,w,h,p=z.sin(I),f=z.cos(I);if(0<x.circle.amount&&0<x.circle.layer){k.clearRect(0,0,q,P);for(var g=0,y=j.length;g<y;g++){var C=(S=j[g]).x,v=S.y,b=S.radius,A=S.speed;q+b<C?C=-b:C<-b?C=q+b:C+=p*A,P+b<v?v=-b:v<-b?v=P+b:v-=f*A,S.x=C,S.y=v,a=C,n=v,o=b,i=S.color,r=S.alpha,t=void 0,(t=k.createRadialGradient(a,n,o,a,n,0)).addColorStop(0,"rgba("+i[0]+","+i[1]+","+i[2]+","+r+")"),t.addColorStop(1,"rgba("+i[0]+","+i[1]+","+i[2]+","+(r-.1)+")"),k.beginPath(),k.arc(a,n,o,0,2*z.PI,!0),k.fillStyle=t,k.fill()}}if(0<x.line.amount&&0<x.line.layer){T.clearRect(0,0,q,P);var F=0;for(y=L.length;F<y;F++){C=(S=L[F]).x,v=S.y;var S,R=S.width;A=S.speed;q+R*p<C?C=-R*p:C<-R*p?C=q+R*p:C+=p*A,P+R*f<v?v=-R*f:v<-R*f?v=P+R*f:v-=f*A,S.x=C,S.y=v,l=C,d=v,c=R,m=S.color,s=S.alpha,h=void 0,u=l+z.sin(I)*c,w=d-z.cos(I)*c,(h=T.createLinearGradient(l,d,u,w)).addColorStop(0,"rgba("+m[0]+","+m[1]+","+m[2]+","+s+")"),h.addColorStop(1,"rgba("+m[0]+","+m[1]+","+m[2]+","+(s-.1)+")"),T.beginPath(),T.moveTo(l,d),T.lineTo(u,w),T.lineWidth=3,T.lineCap="round",T.strokeStyle=h,T.stroke()}}G=requestAnimationFrame(e)},d=function(){if(j=[],L=[],0<x.circle.amount&&0<x.circle.layer)for(var e=0;e<x.circle.amount/x.circle.layer;e++)for(var a=0;a<x.circle.layer;a++)j.push({x:z.random()*q,y:z.random()*P,radius:z.random()*(20+5*a)+(20+5*a),color:x.circle.color,alpha:.2*z.random()+(x.circle.alpha-.1*a),speed:x.speed*(1+.5*a)});if(0<x.line.amount&&0<x.line.layer)for(var n=0;n<x.line.amount/x.line.layer;n++)for(var o=0;o<x.line.layer;o++)L.push({x:z.random()*q,y:z.random()*P,width:z.random()*(20+5*o)+(20+5*o),color:x.line.color,alpha:.2*z.random()+(x.line.alpha-.1*o),speed:x.speed*(1+.5*o)});cancelAnimationFrame(G),G=requestAnimationFrame(l),function(){r.clearRect(0,0,q,P);var e=[];e[0]=r.createRadialGradient(.3*q,.1*P,0,.3*q,.1*P,.9*q),e[0].addColorStop(0,"rgb(0, 26, 77)"),e[0].addColorStop(1,"transparent"),r.translate(q,0),r.scale(-1,1),r.beginPath(),r.fillStyle=e[0],r.fillRect(0,0,q,P),e[1]=r.createRadialGradient(.1*q,.1*P,0,.3*q,.1*P,q),e[1].addColorStop(0,"rgb(0, 150, 240)"),e[1].addColorStop(.8,"transparent"),r.translate(q,0),r.scale(-1,1),r.beginPath(),r.fillStyle=e[1],r.fillRect(0,0,q,P),e[2]=r.createRadialGradient(.1*q,.5*P,0,.1*q,.5*P,.5*q),e[2].addColorStop(0,"rgb(40, 20, 105)"),e[2].addColorStop(1,"transparent"),r.beginPath(),r.fillStyle=e[2],r.fillRect(0,0,q,P)}()};e(document).ready(function(){t(),d()}),e(window).resize(function(){t(),d()})}}(jQuery);
+(function($){
+	var canvas = $('#bg').children('canvas'),
+		background = canvas[0],
+		foreground1 = canvas[1],
+		foreground2 = canvas[2],
+		config = {
+			circle: {
+				amount: 18,
+				layer: 3,
+				color: [157, 97, 207],
+				alpha: 0.3
+			},
+			line: {
+				amount: 12,
+				layer: 3,
+				color: [255, 255, 255],
+				alpha: 0.3
+			},
+			speed: 0.5,
+			angle: 20
+		};
+
+	if (background.getContext){
+		var bctx = background.getContext('2d'),
+			fctx1 = foreground1.getContext('2d'),
+			fctx2 = foreground2.getContext('2d'),
+			M = window.Math, // Cached Math
+			degree = config.angle/360*M.PI*2,
+			circles = [],
+			lines = [],
+			wWidth, wHeight, timer;
+		
+		requestAnimationFrame = window.requestAnimationFrame || 
+			window.mozRequestAnimationFrame ||
+			window.webkitRequestAnimationFrame ||
+			window.msRequestAnimationFrame ||
+			window.oRequestAnimationFrame ||
+			function(callback, element) { setTimeout(callback, 1000 / 60); };
+
+		cancelAnimationFrame = window.cancelAnimationFrame ||
+			window.mozCancelAnimationFrame ||
+			window.webkitCancelAnimationFrame ||
+			window.msCancelAnimationFrame ||
+			window.oCancelAnimationFrame ||
+			clearTimeout;
+
+		var setCanvasHeight = function(){
+			wWidth = $(window).width();
+			wHeight = $(window).height(),
+
+			canvas.each(function(){
+				this.width = wWidth;
+				this.height = wHeight;
+			});
+		};
+
+		var drawCircle = function(x, y, radius, color, alpha){
+			var gradient = fctx1.createRadialGradient(x, y, radius, x, y, 0);
+			gradient.addColorStop(0, 'rgba('+color[0]+','+color[1]+','+color[2]+','+alpha+')');
+			gradient.addColorStop(1, 'rgba('+color[0]+','+color[1]+','+color[2]+','+(alpha-0.1)+')');
+
+			fctx1.beginPath();
+			fctx1.arc(x, y, radius, 0, M.PI*2, true);
+			fctx1.fillStyle = gradient;
+			fctx1.fill();
+		};
+
+		var drawLine = function(x, y, width, color, alpha){
+			var endX = x+M.sin(degree)*width,
+				endY = y-M.cos(degree)*width,
+				gradient = fctx2.createLinearGradient(x, y, endX, endY);
+			gradient.addColorStop(0, 'rgba('+color[0]+','+color[1]+','+color[2]+','+alpha+')');
+			gradient.addColorStop(1, 'rgba('+color[0]+','+color[1]+','+color[2]+','+(alpha-0.1)+')');
+
+			fctx2.beginPath();
+			fctx2.moveTo(x, y);
+			fctx2.lineTo(endX, endY);
+			fctx2.lineWidth = 3;
+			fctx2.lineCap = 'round';
+			fctx2.strokeStyle = gradient;
+			fctx2.stroke();
+		};
+
+		var drawBack = function(){
+			bctx.clearRect(0, 0, wWidth, wHeight);
+
+			var gradient = [];
+			
+			gradient[0] = bctx.createRadialGradient(wWidth*0.3, wHeight*0.1, 0, wWidth*0.3, wHeight*0.1, wWidth*0.9);
+			gradient[0].addColorStop(0, 'rgb(0, 26, 77)');
+			gradient[0].addColorStop(1, 'transparent');
+
+			bctx.translate(wWidth, 0);
+			bctx.scale(-1,1);
+			bctx.beginPath();
+			bctx.fillStyle = gradient[0];
+			bctx.fillRect(0, 0, wWidth, wHeight);
+
+			gradient[1] = bctx.createRadialGradient(wWidth*0.1, wHeight*0.1, 0, wWidth*0.3, wHeight*0.1, wWidth);
+			gradient[1].addColorStop(0, 'rgb(0, 150, 240)');
+			gradient[1].addColorStop(0.8, 'transparent');
+
+			bctx.translate(wWidth, 0);
+			bctx.scale(-1,1);
+			bctx.beginPath();
+			bctx.fillStyle = gradient[1];
+			bctx.fillRect(0, 0, wWidth, wHeight);
+
+			gradient[2] = bctx.createRadialGradient(wWidth*0.1, wHeight*0.5, 0, wWidth*0.1, wHeight*0.5, wWidth*0.5);
+			gradient[2].addColorStop(0, 'rgb(40, 20, 105)');
+			gradient[2].addColorStop(1, 'transparent');
+
+			bctx.beginPath();
+			bctx.fillStyle = gradient[2];
+			bctx.fillRect(0, 0, wWidth, wHeight);
+		};
+
+		var animate = function(){
+			var sin = M.sin(degree),
+				cos = M.cos(degree);
+
+			if (config.circle.amount > 0 && config.circle.layer > 0){
+				fctx1.clearRect(0, 0, wWidth, wHeight);
+				for (var i=0, len = circles.length; i<len; i++){
+					var item = circles[i],
+						x = item.x,
+						y = item.y,
+						radius = item.radius,
+						speed = item.speed;
+
+					if (x > wWidth + radius){
+						x = -radius;
+					} else if (x < -radius){
+						x = wWidth + radius
+					} else {
+						x += sin*speed;
+					}
+
+					if (y > wHeight + radius){
+						y = -radius;
+					} else if (y < -radius){
+						y = wHeight + radius;
+					} else {
+						y -= cos*speed;
+					}
+
+					item.x = x;
+					item.y = y;
+					drawCircle(x, y, radius, item.color, item.alpha);
+				}
+			}
+
+			if (config.line.amount > 0 && config.line.layer > 0){
+				fctx2.clearRect(0, 0, wWidth, wHeight);
+				for (var j=0, len = lines.length; j<len; j++){
+					var item = lines[j],
+						x = item.x,
+						y = item.y,
+						width = item.width,
+						speed = item.speed;
+
+					if (x > wWidth + width * sin){
+						x = -width * sin;
+					} else if (x < -width * sin){
+						x = wWidth + width * sin;
+					} else {
+						x += sin*speed;
+					}
+
+					if (y > wHeight + width * cos){
+						y = -width * cos;
+					} else if (y < -width * cos){
+						y = wHeight + width * cos;
+					} else {
+						y -= cos*speed;
+					}
+					
+					item.x = x;
+					item.y = y;
+					drawLine(x, y, width, item.color, item.alpha);
+				}
+			}
+
+			timer = requestAnimationFrame(animate);
+		};
+
+		var createItem = function(){
+			circles = [];
+			lines = [];
+
+			if (config.circle.amount > 0 && config.circle.layer > 0){
+				for (var i=0; i<config.circle.amount/config.circle.layer; i++){
+					for (var j=0; j<config.circle.layer; j++){
+						circles.push({
+							x: M.random() * wWidth,
+							y: M.random() * wHeight,
+							radius: M.random()*(20+j*5)+(20+j*5),
+							color: config.circle.color,
+							alpha: M.random()*0.2+(config.circle.alpha-j*0.1),
+							speed: config.speed*(1+j*0.5)
+						});
+					}
+				}
+			}
+
+			if (config.line.amount > 0 && config.line.layer > 0){
+				for (var m=0; m<config.line.amount/config.line.layer; m++){
+					for (var n=0; n<config.line.layer; n++){
+						lines.push({
+							x: M.random() * wWidth,
+							y: M.random() * wHeight,
+							width: M.random()*(20+n*5)+(20+n*5),
+							color: config.line.color,
+							alpha: M.random()*0.2+(config.line.alpha-n*0.1),
+							speed: config.speed*(1+n*0.5)
+						});
+					}
+				}
+			}
+
+			cancelAnimationFrame(timer);
+			timer = requestAnimationFrame(animate);
+			drawBack();
+		};
+
+		$(document).ready(function(){
+			setCanvasHeight();
+			createItem();
+		});
+		$(window).resize(function(){
+			setCanvasHeight();
+			createItem();
+		});
+	}
+})(jQuery);
