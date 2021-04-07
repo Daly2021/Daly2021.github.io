@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>CodeCheng</title>
   
-  <subtitle>你才20几岁，怎么就很累没有光了呢？</subtitle>
+  <subtitle>看到了一切的结束，也拥抱所有的开始</subtitle>
   <link href="https://www.codecheng.com/atom.xml" rel="self"/>
   
   <link href="https://www.codecheng.com/"/>
@@ -39,9 +39,9 @@
     <category term="阅读" scheme="https://www.codecheng.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%98%85%E8%AF%BB/"/>
     
     
-    <category term="阅读" scheme="https://www.codecheng.com/tags/%E9%98%85%E8%AF%BB/"/>
-    
     <category term="感悟" scheme="https://www.codecheng.com/tags/%E6%84%9F%E6%82%9F/"/>
+    
+    <category term="阅读" scheme="https://www.codecheng.com/tags/%E9%98%85%E8%AF%BB/"/>
     
   </entry>
   
@@ -71,6 +71,259 @@
     <category term="maven" scheme="https://www.codecheng.com/tags/maven/"/>
     
     <category term="项目构建工具" scheme="https://www.codecheng.com/tags/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一首小诗，你可否愿意像我一样</title>
+    <link href="https://www.codecheng.com/posts/a642e0de.html"/>
+    <id>https://www.codecheng.com/posts/a642e0de.html</id>
+    <published>2021-03-20T13:29:18.000Z</published>
+    <updated>2021-04-07T02:05:53.004Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;ipage&quot;&gt; 
+&lt;div class=&quot;ititle&quot;&gt;你可否愿意像我一样&lt;br&gt;
+  &lt;span style=&quot;align=right; color:#0093E9;font-size:18px;&quot;&gt;-----CodeCheng&lt;/span&gt;
+ </summary>
+        
+      
+    
+    
+    
+    <category term="随笔" scheme="https://www.codecheng.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="心情" scheme="https://www.codecheng.com/categories/%E9%9A%8F%E7%AC%94/%E5%BF%83%E6%83%85/"/>
+    
+    
+    <category term="随笔" scheme="https://www.codecheng.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="心情" scheme="https://www.codecheng.com/tags/%E5%BF%83%E6%83%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>心情随笔</title>
+    <link href="https://www.codecheng.com/posts/f77810a8.html"/>
+    <id>https://www.codecheng.com/posts/f77810a8.html</id>
+    <published>2021-03-15T04:26:55.000Z</published>
+    <updated>2021-04-07T02:04:22.542Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;ipage&quot;&gt; 
+  &lt;div class=&quot;ititle&quot;&gt;学会微笑&lt;/div&gt; 
+  &lt;div class=&quot;izhengwen&quot;&gt;
+    &lt;p&gt; 
+If not to the sun for smiling, warm is still in</summary>
+        
+      
+    
+    
+    
+    <category term="生活感悟" scheme="https://www.codecheng.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
+    
+    <category term="随笔" scheme="https://www.codecheng.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="https://www.codecheng.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="感悟" scheme="https://www.codecheng.com/tags/%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vscode常用插件</title>
+    <link href="https://www.codecheng.com/posts/510fa095.html"/>
+    <id>https://www.codecheng.com/posts/510fa095.html</id>
+    <published>2021-03-11T14:50:59.000Z</published>
+    <updated>2021-04-07T01:52:37.136Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;vscode常用插件&quot;&gt;&lt;a href=&quot;#vscode常用插件&quot; class=&quot;headerlink&quot; title=&quot;vscode常用插件&quot;&gt;&lt;/a&gt;vscode常用插件&lt;/h2&gt;&lt;h3 id=&quot;1、markdow-preview-enhanced&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="vscode" scheme="https://www.codecheng.com/categories/vscode/"/>
+    
+    <category term="插件" scheme="https://www.codecheng.com/categories/vscode/%E6%8F%92%E4%BB%B6/"/>
+    
+    
+    <category term="前端工具" scheme="https://www.codecheng.com/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="vscode" scheme="https://www.codecheng.com/tags/vscode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JSP九大内置对象</title>
+    <link href="https://www.codecheng.com/posts/21b8264b.html"/>
+    <id>https://www.codecheng.com/posts/21b8264b.html</id>
+    <published>2021-03-09T11:48:05.000Z</published>
+    <updated>2021-04-07T01:52:37.136Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JSP九大内置对象&quot;&gt;&lt;a href=&quot;#JSP九大内置对象&quot; class=&quot;headerlink&quot; title=&quot;JSP九大内置对象&quot;&gt;&lt;/a&gt;JSP九大内置对象&lt;/h1&gt;&lt;h2 id=&quot;1-request-对象&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="jsp" scheme="https://www.codecheng.com/categories/jsp/"/>
+    
+    <category term="java基础" scheme="https://www.codecheng.com/categories/jsp/java%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="后端" scheme="https://www.codecheng.com/categories/jsp/java%E5%9F%BA%E7%A1%80/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="java" scheme="https://www.codecheng.com/tags/java/"/>
+    
+    <category term="jsp" scheme="https://www.codecheng.com/tags/jsp/"/>
+    
+    <category term="后端" scheme="https://www.codecheng.com/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JSON</title>
+    <link href="https://www.codecheng.com/posts/5d92c8f1.html"/>
+    <id>https://www.codecheng.com/posts/5d92c8f1.html</id>
+    <published>2021-03-07T01:46:01.000Z</published>
+    <updated>2021-04-07T01:52:37.140Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JSON&quot;&gt;&lt;a href=&quot;#JSON&quot; class=&quot;headerlink&quot; title=&quot;JSON&quot;&gt;&lt;/a&gt;JSON&lt;/h1&gt;&lt;h2 id=&quot;JSON-1&quot;&gt;&lt;a href=&quot;#JSON-1&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://www.codecheng.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="json" scheme="https://www.codecheng.com/categories/%E5%89%8D%E7%AB%AF/json/"/>
+    
+    
+    <category term="前端" scheme="https://www.codecheng.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="json" scheme="https://www.codecheng.com/tags/json/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端提升必备</title>
+    <link href="https://www.codecheng.com/posts/890c8c12.html"/>
+    <id>https://www.codecheng.com/posts/890c8c12.html</id>
+    <published>2021-03-05T07:26:42.000Z</published>
+    <updated>2021-04-07T01:41:06.581Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前端提升&quot;&gt;&lt;a href=&quot;#前端提升&quot; class=&quot;headerlink&quot; title=&quot;前端提升&quot;&gt;&lt;/a&gt;前端提升&lt;/h1&gt;&lt;h2 id=&quot;常用编辑器&quot;&gt;&lt;a href=&quot;#常用编辑器&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://www.codecheng.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="常用链接" scheme="https://www.codecheng.com/categories/%E5%89%8D%E7%AB%AF/%E5%B8%B8%E7%94%A8%E9%93%BE%E6%8E%A5/"/>
+    
+    <category term="资源网站" scheme="https://www.codecheng.com/categories/%E5%89%8D%E7%AB%AF/%E5%B8%B8%E7%94%A8%E9%93%BE%E6%8E%A5/%E8%B5%84%E6%BA%90%E7%BD%91%E7%AB%99/"/>
+    
+    
+    <category term="前端" scheme="https://www.codecheng.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="资源网站" scheme="https://www.codecheng.com/tags/%E8%B5%84%E6%BA%90%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="提升必备" scheme="https://www.codecheng.com/tags/%E6%8F%90%E5%8D%87%E5%BF%85%E5%A4%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>腾讯云部署hexo</title>
+    <link href="https://www.codecheng.com/posts/a34f529.html"/>
+    <id>https://www.codecheng.com/posts/a34f529.html</id>
+    <published>2021-02-24T18:50:02.000Z</published>
+    <updated>2021-04-07T01:43:50.679Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;腾讯云部署hexo&quot;&gt;&lt;a href=&quot;#腾讯云部署hexo&quot; class=&quot;headerlink&quot; title=&quot;腾讯云部署hexo&quot;&gt;&lt;/a&gt;腾讯云部署hexo&lt;/h1&gt;&lt;h3 id=&quot;一、部署环境与准备&quot;&gt;&lt;a href=&quot;#一、部署环境与准备&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="https://www.codecheng.com/categories/hexo/"/>
+    
+    <category term="部署远端" scheme="https://www.codecheng.com/categories/hexo/%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%AB%AF/"/>
+    
+    
+    <category term="hexo" scheme="https://www.codecheng.com/tags/hexo/"/>
+    
+    <category term="腾讯云" scheme="https://www.codecheng.com/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/"/>
+    
+    <category term="博客搭建" scheme="https://www.codecheng.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown语法</title>
+    <link href="https://www.codecheng.com/posts/f134a8e5.html"/>
+    <id>https://www.codecheng.com/posts/f134a8e5.html</id>
+    <published>2021-02-22T13:23:53.000Z</published>
+    <updated>2021-04-07T01:29:21.215Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、为什么要学习-Markdown？&quot;&gt;&lt;a href=&quot;#一、为什么要学习-Markdown？&quot; class=&quot;headerlink&quot; title=&quot;一、为什么要学习 Markdown？&quot;&gt;&lt;/a&gt;一、为什么要学习</summary>
+        
+      
+    
+    
+    
+    <category term="markdown" scheme="https://www.codecheng.com/categories/markdown/"/>
+    
+    <category term="写博客" scheme="https://www.codecheng.com/categories/markdown/%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="Typroa" scheme="https://www.codecheng.com/categories/markdown/%E5%86%99%E5%8D%9A%E5%AE%A2/Typroa/"/>
+    
+    
+    <category term="markdown" scheme="https://www.codecheng.com/tags/markdown/"/>
+    
+    <category term="语法" scheme="https://www.codecheng.com/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+    <category term="Typroa" scheme="https://www.codecheng.com/tags/Typroa/"/>
     
   </entry>
   
