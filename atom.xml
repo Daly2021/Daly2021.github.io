@@ -6,7 +6,7 @@
   <link href="https://www.codecheng.com/atom.xml" rel="self"/>
   
   <link href="https://www.codecheng.com/"/>
-  <updated>2021-03-30T13:53:19.313Z</updated>
+  <updated>2021-04-11T14:06:00.746Z</updated>
   <id>https://www.codecheng.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一些其他的了解</title>
+    <link href="https://www.codecheng.com/posts/c91fe873.html"/>
+    <id>https://www.codecheng.com/posts/c91fe873.html</id>
+    <published>2021-04-11T13:35:37.000Z</published>
+    <updated>2021-04-11T14:06:00.746Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;如何运行一个网站？&quot;&gt;&lt;a href=&quot;#如何运行一个网站？&quot; class=&quot;headerlink&quot; title=&quot;如何运行一个网站？&quot;&gt;&lt;/a&gt;如何运行一个网站？&lt;/h1&gt;&lt;h2 id=&quot;要运行网站，最基本需要服务器、IP地址、域名、DNS、数据库&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="计算机" scheme="https://www.codecheng.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="自学网络常识" scheme="https://www.codecheng.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%87%AA%E5%AD%A6%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86/"/>
+    
+    <category term="网络常识" scheme="https://www.codecheng.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%87%AA%E5%AD%A6%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86/%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86/"/>
+    
+    
+    <category term="网站" scheme="https://www.codecheng.com/tags/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="网络常识" scheme="https://www.codecheng.com/tags/%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86/"/>
+    
+    <category term="部署" scheme="https://www.codecheng.com/tags/%E9%83%A8%E7%BD%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>读书笔记</title>
