@@ -6,7 +6,7 @@
   <link href="https://www.codecheng.com/atom.xml" rel="self"/>
   
   <link href="https://www.codecheng.com/"/>
-  <updated>2021-04-11T14:06:00.746Z</updated>
+  <updated>2021-04-12T11:43:08.389Z</updated>
   <id>https://www.codecheng.com/</id>
   
   <author>
@@ -15,6 +15,70 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Andriod学习笔记</title>
+    <link href="https://www.codecheng.com/posts/b191fb6f.html"/>
+    <id>https://www.codecheng.com/posts/b191fb6f.html</id>
+    <published>2021-04-12T11:39:45.000Z</published>
+    <updated>2021-04-12T11:43:08.389Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Andirod学习笔记（一）&quot;&gt;&lt;a href=&quot;#Andirod学习笔记（一）&quot; class=&quot;headerlink&quot; title=&quot;Andirod学习笔记（一）&quot;&gt;&lt;/a&gt;Andirod学习笔记（一）&lt;/h1&gt;&lt;h2 id=&quot;移动开发学习路线图&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="移动应用开发" scheme="https://www.codecheng.com/categories/%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="Andriod" scheme="https://www.codecheng.com/categories/%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/Andriod/"/>
+    
+    <category term="java" scheme="https://www.codecheng.com/categories/%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/Andriod/java/"/>
+    
+    
+    <category term="Andriod" scheme="https://www.codecheng.com/tags/Andriod/"/>
+    
+    <category term="java" scheme="https://www.codecheng.com/tags/java/"/>
+    
+    <category term="移动应用开发" scheme="https://www.codecheng.com/tags/%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XML学习笔记</title>
+    <link href="https://www.codecheng.com/posts/30463f21.html"/>
+    <id>https://www.codecheng.com/posts/30463f21.html</id>
+    <published>2021-04-12T11:37:46.000Z</published>
+    <updated>2021-04-12T11:43:08.391Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;XML学习笔记&quot;&gt;&lt;a href=&quot;#XML学习笔记&quot; class=&quot;headerlink&quot; title=&quot;XML学习笔记&quot;&gt;&lt;/a&gt;XML学习笔记&lt;/h1&gt;&lt;h3 id=&quot;XML简介&quot;&gt;&lt;a href=&quot;#XML简介&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="xml" scheme="https://www.codecheng.com/categories/xml/"/>
+    
+    <category term="后端" scheme="https://www.codecheng.com/categories/xml/%E5%90%8E%E7%AB%AF/"/>
+    
+    <category term="java" scheme="https://www.codecheng.com/categories/xml/%E5%90%8E%E7%AB%AF/java/"/>
+    
+    
+    <category term="java" scheme="https://www.codecheng.com/tags/java/"/>
+    
+    <category term="XML" scheme="https://www.codecheng.com/tags/XML/"/>
+    
+  </entry>
   
   <entry>
     <title>一些其他的了解</title>
