@@ -234,3 +234,7 @@ $('#fullscreen_li ').on('click', function() {
     b = !b;
     b ? enterfullscreen() : exitfullscreen();
 })
+
+
+
+
