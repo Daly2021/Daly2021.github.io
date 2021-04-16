@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>CodeCheng</title>
   
-  <subtitle>夕阳会落在你身上，你会变得快乐</subtitle>
+  <subtitle>努力，在努力</subtitle>
   <link href="https://www.codecheng.com/atom.xml" rel="self"/>
   
   <link href="https://www.codecheng.com/"/>
-  <updated>2021-04-14T07:50:13.606Z</updated>
+  <updated>2021-04-16T10:35:03.930Z</updated>
   <id>https://www.codecheng.com/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学习Git使用</title>
+    <link href="https://www.codecheng.com/posts/48926450.html"/>
+    <id>https://www.codecheng.com/posts/48926450.html</id>
+    <published>2021-04-16T10:24:59.000Z</published>
+    <updated>2021-04-16T10:35:03.930Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;git使用学习&quot;&gt;&lt;a href=&quot;#git使用学习&quot; class=&quot;headerlink&quot; title=&quot;git使用学习&quot;&gt;&lt;/a&gt;git使用学习&lt;/h1&gt;&lt;h2 id=&quot;一、安装&quot;&gt;&lt;a href=&quot;#一、安装&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="分布式版本控制" scheme="https://www.codecheng.com/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+    
+    <category term="Gitee" scheme="https://www.codecheng.com/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Gitee/"/>
+    
+    <category term="基本技能" scheme="https://www.codecheng.com/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Gitee/%E5%9F%BA%E6%9C%AC%E6%8A%80%E8%83%BD/"/>
+    
+    
+    <category term="Git" scheme="https://www.codecheng.com/tags/Git/"/>
+    
+    <category term="部署项目" scheme="https://www.codecheng.com/tags/%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE/"/>
+    
+    <category term="基本技能" scheme="https://www.codecheng.com/tags/%E5%9F%BA%E6%9C%AC%E6%8A%80%E8%83%BD/"/>
+    
+    <category term="分布式版本控制" scheme="https://www.codecheng.com/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>Andriod学习笔记</title>
@@ -77,6 +112,39 @@
     <category term="java" scheme="https://www.codecheng.com/tags/java/"/>
     
     <category term="XML" scheme="https://www.codecheng.com/tags/XML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络的一些其他的了解</title>
+    <link href="https://www.codecheng.com/posts/c91fe873.html"/>
+    <id>https://www.codecheng.com/posts/c91fe873.html</id>
+    <published>2021-04-11T13:35:37.000Z</published>
+    <updated>2021-04-16T11:36:51.759Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;如何运行一个网站？&quot;&gt;&lt;a href=&quot;#如何运行一个网站？&quot; class=&quot;headerlink&quot; title=&quot;如何运行一个网站？&quot;&gt;&lt;/a&gt;如何运行一个网站？&lt;/h1&gt;&lt;h2 id=&quot;要运行网站，最基本需要服务器、IP地址、域名、DNS、数据库&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="计算机" scheme="https://www.codecheng.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="自学网络常识" scheme="https://www.codecheng.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%87%AA%E5%AD%A6%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86/"/>
+    
+    <category term="网络常识" scheme="https://www.codecheng.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%87%AA%E5%AD%A6%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86/%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86/"/>
+    
+    
+    <category term="网站" scheme="https://www.codecheng.com/tags/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="网络常识" scheme="https://www.codecheng.com/tags/%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86/"/>
+    
+    <category term="部署" scheme="https://www.codecheng.com/tags/%E9%83%A8%E7%BD%B2/"/>
     
   </entry>
   
