@@ -3,11 +3,11 @@
   <title>CodeCheng</title>
   
   <subtitle>努力，在努力</subtitle>
-  <link href="https://www.codecheng.com/atom.xml" rel="self"/>
+  <link href="https://gitee.com/ck_cheng/codecheng.git/atom.xml" rel="self"/>
   
-  <link href="https://www.codecheng.com/"/>
+  <link href="https://gitee.com/ck_cheng/codecheng.git/"/>
   <updated>2021-04-16T12:05:39.004Z</updated>
-  <id>https://www.codecheng.com/</id>
+  <id>https://gitee.com/ck_cheng/codecheng.git/</id>
   
   <author>
     <name>CodeCheng</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>学习Git使用</title>
-    <link href="https://www.codecheng.com/posts/48926450.html"/>
-    <id>https://www.codecheng.com/posts/48926450.html</id>
+    <link href="https://gitee.com/ck_cheng/codecheng.git/posts/48926450.html"/>
+    <id>https://gitee.com/ck_cheng/codecheng.git/posts/48926450.html</id>
     <published>2021-04-16T10:24:59.000Z</published>
     <updated>2021-04-16T12:05:39.004Z</updated>
     
@@ -34,27 +34,27 @@
     
     
     
-    <category term="分布式版本控制" scheme="https://www.codecheng.com/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+    <category term="分布式版本控制" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
     
-    <category term="Gitee" scheme="https://www.codecheng.com/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Gitee/"/>
+    <category term="Gitee" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Gitee/"/>
     
-    <category term="基本技能" scheme="https://www.codecheng.com/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Gitee/%E5%9F%BA%E6%9C%AC%E6%8A%80%E8%83%BD/"/>
+    <category term="基本技能" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Gitee/%E5%9F%BA%E6%9C%AC%E6%8A%80%E8%83%BD/"/>
     
     
-    <category term="Git" scheme="https://www.codecheng.com/tags/Git/"/>
+    <category term="Git" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/Git/"/>
     
-    <category term="部署项目" scheme="https://www.codecheng.com/tags/%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE/"/>
+    <category term="部署项目" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE/"/>
     
-    <category term="基本技能" scheme="https://www.codecheng.com/tags/%E5%9F%BA%E6%9C%AC%E6%8A%80%E8%83%BD/"/>
+    <category term="基本技能" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E5%9F%BA%E6%9C%AC%E6%8A%80%E8%83%BD/"/>
     
-    <category term="分布式版本控制" scheme="https://www.codecheng.com/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+    <category term="分布式版本控制" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
     
   </entry>
   
   <entry>
     <title>Andriod学习笔记</title>
-    <link href="https://www.codecheng.com/posts/b191fb6f.html"/>
-    <id>https://www.codecheng.com/posts/b191fb6f.html</id>
+    <link href="https://gitee.com/ck_cheng/codecheng.git/posts/b191fb6f.html"/>
+    <id>https://gitee.com/ck_cheng/codecheng.git/posts/b191fb6f.html</id>
     <published>2021-04-12T11:39:45.000Z</published>
     <updated>2021-04-14T07:50:13.606Z</updated>
     
@@ -69,25 +69,25 @@
     
     
     
-    <category term="移动应用开发" scheme="https://www.codecheng.com/categories/%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"/>
+    <category term="移动应用开发" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"/>
     
-    <category term="Andriod" scheme="https://www.codecheng.com/categories/%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/Andriod/"/>
+    <category term="Andriod" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/Andriod/"/>
     
-    <category term="java" scheme="https://www.codecheng.com/categories/%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/Andriod/java/"/>
+    <category term="java" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/Andriod/java/"/>
     
     
-    <category term="Andriod" scheme="https://www.codecheng.com/tags/Andriod/"/>
+    <category term="Andriod" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/Andriod/"/>
     
-    <category term="java" scheme="https://www.codecheng.com/tags/java/"/>
+    <category term="java" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/java/"/>
     
-    <category term="移动应用开发" scheme="https://www.codecheng.com/tags/%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"/>
+    <category term="移动应用开发" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
   <entry>
     <title>XML学习笔记</title>
-    <link href="https://www.codecheng.com/posts/30463f21.html"/>
-    <id>https://www.codecheng.com/posts/30463f21.html</id>
+    <link href="https://gitee.com/ck_cheng/codecheng.git/posts/30463f21.html"/>
+    <id>https://gitee.com/ck_cheng/codecheng.git/posts/30463f21.html</id>
     <published>2021-04-12T11:37:46.000Z</published>
     <updated>2021-04-12T11:43:08.391Z</updated>
     
@@ -102,23 +102,23 @@
     
     
     
-    <category term="xml" scheme="https://www.codecheng.com/categories/xml/"/>
+    <category term="xml" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/xml/"/>
     
-    <category term="后端" scheme="https://www.codecheng.com/categories/xml/%E5%90%8E%E7%AB%AF/"/>
+    <category term="后端" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/xml/%E5%90%8E%E7%AB%AF/"/>
     
-    <category term="java" scheme="https://www.codecheng.com/categories/xml/%E5%90%8E%E7%AB%AF/java/"/>
+    <category term="java" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/xml/%E5%90%8E%E7%AB%AF/java/"/>
     
     
-    <category term="java" scheme="https://www.codecheng.com/tags/java/"/>
+    <category term="java" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/java/"/>
     
-    <category term="XML" scheme="https://www.codecheng.com/tags/XML/"/>
+    <category term="XML" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/XML/"/>
     
   </entry>
   
   <entry>
     <title>网络的一些其他的了解</title>
-    <link href="https://www.codecheng.com/posts/c91fe873.html"/>
-    <id>https://www.codecheng.com/posts/c91fe873.html</id>
+    <link href="https://gitee.com/ck_cheng/codecheng.git/posts/c91fe873.html"/>
+    <id>https://gitee.com/ck_cheng/codecheng.git/posts/c91fe873.html</id>
     <published>2021-04-11T13:35:37.000Z</published>
     <updated>2021-04-16T11:36:51.759Z</updated>
     
@@ -133,25 +133,25 @@
     
     
     
-    <category term="计算机" scheme="https://www.codecheng.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    <category term="计算机" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
-    <category term="自学网络常识" scheme="https://www.codecheng.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%87%AA%E5%AD%A6%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86/"/>
+    <category term="自学网络常识" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%87%AA%E5%AD%A6%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86/"/>
     
-    <category term="网络常识" scheme="https://www.codecheng.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%87%AA%E5%AD%A6%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86/%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86/"/>
+    <category term="网络常识" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%87%AA%E5%AD%A6%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86/%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86/"/>
     
     
-    <category term="网站" scheme="https://www.codecheng.com/tags/%E7%BD%91%E7%AB%99/"/>
+    <category term="网站" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E7%BD%91%E7%AB%99/"/>
     
-    <category term="网络常识" scheme="https://www.codecheng.com/tags/%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86/"/>
+    <category term="网络常识" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86/"/>
     
-    <category term="部署" scheme="https://www.codecheng.com/tags/%E9%83%A8%E7%BD%B2/"/>
+    <category term="部署" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E9%83%A8%E7%BD%B2/"/>
     
   </entry>
   
   <entry>
     <title>读书笔记</title>
-    <link href="https://www.codecheng.com/posts/7b67faab.html"/>
-    <id>https://www.codecheng.com/posts/7b67faab.html</id>
+    <link href="https://gitee.com/ck_cheng/codecheng.git/posts/7b67faab.html"/>
+    <id>https://gitee.com/ck_cheng/codecheng.git/posts/7b67faab.html</id>
     <published>2021-03-30T13:41:02.000Z</published>
     <updated>2021-03-30T13:53:19.313Z</updated>
     
@@ -166,21 +166,21 @@
     
     
     
-    <category term="读书笔记" scheme="https://www.codecheng.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <category term="读书笔记" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="阅读" scheme="https://www.codecheng.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%98%85%E8%AF%BB/"/>
+    <category term="阅读" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%98%85%E8%AF%BB/"/>
     
     
-    <category term="感悟" scheme="https://www.codecheng.com/tags/%E6%84%9F%E6%82%9F/"/>
+    <category term="感悟" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E6%84%9F%E6%82%9F/"/>
     
-    <category term="阅读" scheme="https://www.codecheng.com/tags/%E9%98%85%E8%AF%BB/"/>
+    <category term="阅读" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E9%98%85%E8%AF%BB/"/>
     
   </entry>
   
   <entry>
     <title>maven</title>
-    <link href="https://www.codecheng.com/posts/c6e613d8.html"/>
-    <id>https://www.codecheng.com/posts/c6e613d8.html</id>
+    <link href="https://gitee.com/ck_cheng/codecheng.git/posts/c6e613d8.html"/>
+    <id>https://gitee.com/ck_cheng/codecheng.git/posts/c6e613d8.html</id>
     <published>2021-03-23T14:26:07.000Z</published>
     <updated>2021-03-23T14:42:55.971Z</updated>
     
@@ -195,21 +195,21 @@
     
     
     
-    <category term="maven" scheme="https://www.codecheng.com/categories/maven/"/>
+    <category term="maven" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/maven/"/>
     
-    <category term="java" scheme="https://www.codecheng.com/categories/maven/java/"/>
+    <category term="java" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/maven/java/"/>
     
     
-    <category term="maven" scheme="https://www.codecheng.com/tags/maven/"/>
+    <category term="maven" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/maven/"/>
     
-    <category term="项目构建工具" scheme="https://www.codecheng.com/tags/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/"/>
+    <category term="项目构建工具" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>一首小诗，你可否愿意像我一样</title>
-    <link href="https://www.codecheng.com/posts/a642e0de.html"/>
-    <id>https://www.codecheng.com/posts/a642e0de.html</id>
+    <link href="https://gitee.com/ck_cheng/codecheng.git/posts/a642e0de.html"/>
+    <id>https://gitee.com/ck_cheng/codecheng.git/posts/a642e0de.html</id>
     <published>2021-03-20T13:29:18.000Z</published>
     <updated>2021-04-07T02:05:53.004Z</updated>
     
@@ -227,21 +227,21 @@
     
     
     
-    <category term="随笔" scheme="https://www.codecheng.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E9%9A%8F%E7%AC%94/"/>
     
-    <category term="心情" scheme="https://www.codecheng.com/categories/%E9%9A%8F%E7%AC%94/%E5%BF%83%E6%83%85/"/>
+    <category term="心情" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E9%9A%8F%E7%AC%94/%E5%BF%83%E6%83%85/"/>
     
     
-    <category term="随笔" scheme="https://www.codecheng.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E9%9A%8F%E7%AC%94/"/>
     
-    <category term="心情" scheme="https://www.codecheng.com/tags/%E5%BF%83%E6%83%85/"/>
+    <category term="心情" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E5%BF%83%E6%83%85/"/>
     
   </entry>
   
   <entry>
     <title>心情随笔</title>
-    <link href="https://www.codecheng.com/posts/f77810a8.html"/>
-    <id>https://www.codecheng.com/posts/f77810a8.html</id>
+    <link href="https://gitee.com/ck_cheng/codecheng.git/posts/f77810a8.html"/>
+    <id>https://gitee.com/ck_cheng/codecheng.git/posts/f77810a8.html</id>
     <published>2021-03-15T04:26:55.000Z</published>
     <updated>2021-04-07T02:04:22.542Z</updated>
     
@@ -260,21 +260,21 @@ If not to the sun for smiling, warm is still in</summary>
     
     
     
-    <category term="生活感悟" scheme="https://www.codecheng.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
+    <category term="生活感悟" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
     
-    <category term="随笔" scheme="https://www.codecheng.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="随笔" scheme="https://www.codecheng.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E9%9A%8F%E7%AC%94/"/>
     
-    <category term="感悟" scheme="https://www.codecheng.com/tags/%E6%84%9F%E6%82%9F/"/>
+    <category term="感悟" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E6%84%9F%E6%82%9F/"/>
     
   </entry>
   
   <entry>
     <title>vscode常用插件</title>
-    <link href="https://www.codecheng.com/posts/510fa095.html"/>
-    <id>https://www.codecheng.com/posts/510fa095.html</id>
+    <link href="https://gitee.com/ck_cheng/codecheng.git/posts/510fa095.html"/>
+    <id>https://gitee.com/ck_cheng/codecheng.git/posts/510fa095.html</id>
     <published>2021-03-11T14:50:59.000Z</published>
     <updated>2021-04-14T07:53:36.081Z</updated>
     
@@ -289,21 +289,21 @@ If not to the sun for smiling, warm is still in</summary>
     
     
     
-    <category term="vscode" scheme="https://www.codecheng.com/categories/vscode/"/>
+    <category term="vscode" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/vscode/"/>
     
-    <category term="插件" scheme="https://www.codecheng.com/categories/vscode/%E6%8F%92%E4%BB%B6/"/>
+    <category term="插件" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/vscode/%E6%8F%92%E4%BB%B6/"/>
     
     
-    <category term="前端工具" scheme="https://www.codecheng.com/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/"/>
+    <category term="前端工具" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="vscode" scheme="https://www.codecheng.com/tags/vscode/"/>
+    <category term="vscode" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/vscode/"/>
     
   </entry>
   
   <entry>
     <title>JSP九大内置对象</title>
-    <link href="https://www.codecheng.com/posts/21b8264b.html"/>
-    <id>https://www.codecheng.com/posts/21b8264b.html</id>
+    <link href="https://gitee.com/ck_cheng/codecheng.git/posts/21b8264b.html"/>
+    <id>https://gitee.com/ck_cheng/codecheng.git/posts/21b8264b.html</id>
     <published>2021-03-09T11:48:05.000Z</published>
     <updated>2021-04-07T01:52:37.136Z</updated>
     
@@ -318,25 +318,25 @@ If not to the sun for smiling, warm is still in</summary>
     
     
     
-    <category term="jsp" scheme="https://www.codecheng.com/categories/jsp/"/>
+    <category term="jsp" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/jsp/"/>
     
-    <category term="java基础" scheme="https://www.codecheng.com/categories/jsp/java%E5%9F%BA%E7%A1%80/"/>
+    <category term="java基础" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/jsp/java%E5%9F%BA%E7%A1%80/"/>
     
-    <category term="后端" scheme="https://www.codecheng.com/categories/jsp/java%E5%9F%BA%E7%A1%80/%E5%90%8E%E7%AB%AF/"/>
+    <category term="后端" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/jsp/java%E5%9F%BA%E7%A1%80/%E5%90%8E%E7%AB%AF/"/>
     
     
-    <category term="java" scheme="https://www.codecheng.com/tags/java/"/>
+    <category term="java" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/java/"/>
     
-    <category term="jsp" scheme="https://www.codecheng.com/tags/jsp/"/>
+    <category term="jsp" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/jsp/"/>
     
-    <category term="后端" scheme="https://www.codecheng.com/tags/%E5%90%8E%E7%AB%AF/"/>
+    <category term="后端" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>JSON</title>
-    <link href="https://www.codecheng.com/posts/5d92c8f1.html"/>
-    <id>https://www.codecheng.com/posts/5d92c8f1.html</id>
+    <link href="https://gitee.com/ck_cheng/codecheng.git/posts/5d92c8f1.html"/>
+    <id>https://gitee.com/ck_cheng/codecheng.git/posts/5d92c8f1.html</id>
     <published>2021-03-07T01:46:01.000Z</published>
     <updated>2021-04-14T07:53:20.526Z</updated>
     
@@ -351,21 +351,21 @@ If not to the sun for smiling, warm is still in</summary>
     
     
     
-    <category term="前端" scheme="https://www.codecheng.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E5%89%8D%E7%AB%AF/"/>
     
-    <category term="json" scheme="https://www.codecheng.com/categories/%E5%89%8D%E7%AB%AF/json/"/>
+    <category term="json" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E5%89%8D%E7%AB%AF/json/"/>
     
     
-    <category term="前端" scheme="https://www.codecheng.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E5%89%8D%E7%AB%AF/"/>
     
-    <category term="json" scheme="https://www.codecheng.com/tags/json/"/>
+    <category term="json" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/json/"/>
     
   </entry>
   
   <entry>
     <title>前端提升必备</title>
-    <link href="https://www.codecheng.com/posts/890c8c12.html"/>
-    <id>https://www.codecheng.com/posts/890c8c12.html</id>
+    <link href="https://gitee.com/ck_cheng/codecheng.git/posts/890c8c12.html"/>
+    <id>https://gitee.com/ck_cheng/codecheng.git/posts/890c8c12.html</id>
     <published>2021-03-05T07:26:42.000Z</published>
     <updated>2021-04-07T01:41:06.581Z</updated>
     
@@ -380,25 +380,25 @@ If not to the sun for smiling, warm is still in</summary>
     
     
     
-    <category term="前端" scheme="https://www.codecheng.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E5%89%8D%E7%AB%AF/"/>
     
-    <category term="常用链接" scheme="https://www.codecheng.com/categories/%E5%89%8D%E7%AB%AF/%E5%B8%B8%E7%94%A8%E9%93%BE%E6%8E%A5/"/>
+    <category term="常用链接" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E5%89%8D%E7%AB%AF/%E5%B8%B8%E7%94%A8%E9%93%BE%E6%8E%A5/"/>
     
-    <category term="资源网站" scheme="https://www.codecheng.com/categories/%E5%89%8D%E7%AB%AF/%E5%B8%B8%E7%94%A8%E9%93%BE%E6%8E%A5/%E8%B5%84%E6%BA%90%E7%BD%91%E7%AB%99/"/>
+    <category term="资源网站" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/%E5%89%8D%E7%AB%AF/%E5%B8%B8%E7%94%A8%E9%93%BE%E6%8E%A5/%E8%B5%84%E6%BA%90%E7%BD%91%E7%AB%99/"/>
     
     
-    <category term="前端" scheme="https://www.codecheng.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E5%89%8D%E7%AB%AF/"/>
     
-    <category term="资源网站" scheme="https://www.codecheng.com/tags/%E8%B5%84%E6%BA%90%E7%BD%91%E7%AB%99/"/>
+    <category term="资源网站" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E8%B5%84%E6%BA%90%E7%BD%91%E7%AB%99/"/>
     
-    <category term="提升必备" scheme="https://www.codecheng.com/tags/%E6%8F%90%E5%8D%87%E5%BF%85%E5%A4%87/"/>
+    <category term="提升必备" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E6%8F%90%E5%8D%87%E5%BF%85%E5%A4%87/"/>
     
   </entry>
   
   <entry>
     <title>腾讯云部署hexo</title>
-    <link href="https://www.codecheng.com/posts/a34f529.html"/>
-    <id>https://www.codecheng.com/posts/a34f529.html</id>
+    <link href="https://gitee.com/ck_cheng/codecheng.git/posts/a34f529.html"/>
+    <id>https://gitee.com/ck_cheng/codecheng.git/posts/a34f529.html</id>
     <published>2021-02-24T18:50:02.000Z</published>
     <updated>2021-04-07T01:43:50.679Z</updated>
     
@@ -413,23 +413,23 @@ If not to the sun for smiling, warm is still in</summary>
     
     
     
-    <category term="hexo" scheme="https://www.codecheng.com/categories/hexo/"/>
+    <category term="hexo" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/hexo/"/>
     
-    <category term="部署远端" scheme="https://www.codecheng.com/categories/hexo/%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%AB%AF/"/>
+    <category term="部署远端" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/hexo/%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%AB%AF/"/>
     
     
-    <category term="hexo" scheme="https://www.codecheng.com/tags/hexo/"/>
+    <category term="hexo" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/hexo/"/>
     
-    <category term="腾讯云" scheme="https://www.codecheng.com/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/"/>
+    <category term="腾讯云" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/"/>
     
-    <category term="博客搭建" scheme="https://www.codecheng.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
   <entry>
     <title>markdown语法</title>
-    <link href="https://www.codecheng.com/posts/f134a8e5.html"/>
-    <id>https://www.codecheng.com/posts/f134a8e5.html</id>
+    <link href="https://gitee.com/ck_cheng/codecheng.git/posts/f134a8e5.html"/>
+    <id>https://gitee.com/ck_cheng/codecheng.git/posts/f134a8e5.html</id>
     <published>2021-02-22T13:23:53.000Z</published>
     <updated>2021-04-07T01:29:21.215Z</updated>
     
@@ -444,18 +444,18 @@ If not to the sun for smiling, warm is still in</summary>
     
     
     
-    <category term="markdown" scheme="https://www.codecheng.com/categories/markdown/"/>
+    <category term="markdown" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/markdown/"/>
     
-    <category term="写博客" scheme="https://www.codecheng.com/categories/markdown/%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
+    <category term="写博客" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/markdown/%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
     
-    <category term="Typroa" scheme="https://www.codecheng.com/categories/markdown/%E5%86%99%E5%8D%9A%E5%AE%A2/Typroa/"/>
+    <category term="Typroa" scheme="https://gitee.com/ck_cheng/codecheng.git/categories/markdown/%E5%86%99%E5%8D%9A%E5%AE%A2/Typroa/"/>
     
     
-    <category term="markdown" scheme="https://www.codecheng.com/tags/markdown/"/>
+    <category term="markdown" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/markdown/"/>
     
-    <category term="语法" scheme="https://www.codecheng.com/tags/%E8%AF%AD%E6%B3%95/"/>
+    <category term="语法" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/%E8%AF%AD%E6%B3%95/"/>
     
-    <category term="Typroa" scheme="https://www.codecheng.com/tags/Typroa/"/>
+    <category term="Typroa" scheme="https://gitee.com/ck_cheng/codecheng.git/tags/Typroa/"/>
     
   </entry>
   
