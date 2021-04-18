@@ -1,1 +1,247 @@
-body{cursor:url(https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.6/images/mouse.cur),auto;background-color:@theme_background}...... ...... ::-webkit-scrollbar-thumb{background-color:#53acff;background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);border-radius:3em}::-webkit-scrollbar-track{background-color:#a8a4cc;border-radius:3em}::-webkit-scrollbar{width:12px;height:15px}.iframe_video{position:relative;width:100%}@media only screen and (max-width:767px){.iframe_video{height:15em}}@media only screen and (min-width:768px) and (max-width:991px){.iframe_video{height:20em}}@media only screen and (min-width:992px) and (max-width:1199px){.iframe_video{height:30em}}@media only screen and (min-width:1200px){.iframe_video{height:40em}}.iframe_cross{position:relative;width:100%;height:0;padding-bottom:75%}.iframe_cross iframe{position:absolute;width:100%;height:100%;left:0;top:0}
+/* Here is your custom css styles. */
+
+body {
+    cursor: url(https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.6/images/mouse.cur),auto;
+    background-color: @theme_background;
+    ......
+    ......
+}
+/*滚动条样式1*/
+::-webkit-scrollbar-thumb {
+    background-color: #53acff;
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+    border-radius: 3em;
+}
+::-webkit-scrollbar-track {
+    background-color: #a8a4cc;
+    border-radius: 3em;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    height: 15px;
+}
+
+
+
+/*灯笼样式*/
+/*.deng-box {
+        position: fixed;
+        top: -40px;
+        right: -20px;
+        z-index: 999;
+}
+ 
+.deng-box1 {
+        position: fixed;
+        top: -30px;
+        right: 10px;
+        z-index: 999;
+}
+ 
+.deng-box1 .deng {
+        position: relative;
+        width: 120px;
+        height: 90px;
+        margin: 50px;
+        background: #B721FF;
+        background: rgba(216, 0, 15, 0.8);
+        border-radius: 50% 50%;
+        -webkit-transform-origin: 50% -100px;
+        -webkit-animation: swing 5s infinite ease-in-out;
+        box-shadow: -5px 5px 30px 4px rgba(252, 144, 61, 1);
+}
+ 
+.deng {
+        position: relative;
+        width: 120px;
+        height: 90px;
+        margin: 50px;
+        background: #d8000f;
+        background: rgba(216, 0, 15, 0.8);
+        border-radius: 50% 50%;
+        -webkit-transform-origin: 50% -100px;
+        -webkit-animation: swing 3s infinite ease-in-out;
+        box-shadow: -5px 5px 50px 4px rgba(250, 108, 0, 1);
+}
+ 
+.deng-a {
+        width: 100px;
+        height: 90px;
+        background: #d8000f;
+        background: rgba(216, 0, 15, 0.1);
+        margin: 12px 8px 8px 10px;
+        border-radius: 50% 50%;
+        border: 2px solid #b79ad0;
+}
+ 
+.deng-b {
+        width: 45px;
+        height: 90px;
+        background: #d8000f;
+        background: rgba(216, 0, 15, 0.1);
+        margin: -4px 8px 8px 26px;
+        border-radius: 50% 50%;
+        border: 2px solid #c3c4fc;
+}
+ 
+.xian {
+        position: absolute;
+        top: -20px;
+        left: 60px;
+        width: 2px;
+        height: 20px;
+        background: #21D4FD;
+}
+ 
+.shui-a {
+        position: relative;
+        width: 5px;
+        height: 20px;
+        margin: -5px 0 0 59px;
+        -webkit-animation: swing 4s infinite ease-in-out;
+        -webkit-transform-origin: 50% -45px;
+        background: #B721FF;
+        border-radius: 0 0 5px 5px;
+}
+ 
+.shui-b {
+        position: absolute;
+        top: 14px;
+        left: -2px;
+        width: 10px;
+        height: 10px;
+        background: #B721FF;
+        border-radius: 50%;
+}
+ 
+.shui-c {
+        position: absolute;
+        top: 18px;
+        left: -2px;
+        width: 10px;
+        height: 35px;
+        background: #fe88a6;
+        border-radius: 0 0 0 5px;
+}
+ 
+.deng:before {
+        position: absolute;
+        top: -7px;
+        left: 29px;
+        height: 12px;
+        width: 60px;
+        content: " ";
+        display: block;
+        z-index: 999;
+        border-radius: 5px 5px 0 0;
+        border: solid 1px #dc8f03;
+        background: #ffa500;
+        background: linear-gradient(to right, #FFC2C3, #FE7773, #FCD3D1, #FCDFF3, #FE929F);
+}
+ 
+.deng:after {
+        position: absolute;
+        bottom: -7px;
+        left: 10px;
+        height: 12px;
+        width: 60px;
+        content: " ";
+        display: block;
+        margin-left: 20px;
+        border-radius: 0 0 5px 5px;
+        border: solid 1px #1ea2e1;
+        background: #1ea2e1;
+        background: linear-gradient(to right, #dc8f03, #ffa500, #dc8f03, #ffa500, #dc8f03);
+}
+ 
+.deng-t {
+        font-family: 华文行楷,Arial,Lucida Grande,Tahoma,sans-serif;
+        font-size: 3.2rem;
+        color: #c8b9db;
+        font-weight: bold;
+        line-height: 85px;
+        text-align: center;
+}
+ 
+.night .deng-t,
+.night .deng-box,
+.night .deng-box1 {
+        background: transparent !important;
+}
+ 
+@-moz-keyframes swing {
+        0% {
+                -moz-transform: rotate(-10deg)
+        }
+ 
+        50% {
+                -moz-transform: rotate(10deg)
+        }
+ 
+        100% {
+                -moz-transform: rotate(-10deg)
+        }
+}
+ 
+@-webkit-keyframes swing {
+        0% {
+                -webkit-transform: rotate(-10deg)
+        }
+ 
+        50% {
+                -webkit-transform: rotate(10deg)
+        }
+ 
+        100% {
+                -webkit-transform: rotate(-10deg)
+        }
+}
+
+*/
+
+
+/*哔哩哔哩视频挂载*/
+ 
+.iframe_video {
+    position: relative;
+    width: 100%;
+}
+ 
+@media only screen and (max-width: 767px) {
+    .iframe_video {
+        height: 15em;
+    }
+}
+ 
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .iframe_video {
+        height: 20em;
+    }
+}
+ 
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .iframe_video {
+        height: 30em;
+    }
+}
+ 
+@media only screen and (min-width: 1200px) {
+    .iframe_video {
+        height: 40em;
+    }
+}
+ 
+.iframe_cross {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%
+}
+ 
+.iframe_cross iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0
+}
