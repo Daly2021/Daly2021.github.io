@@ -6,7 +6,7 @@
   <link href="https://www.codecheng.com/atom.xml" rel="self"/>
   
   <link href="https://www.codecheng.com/"/>
-  <updated>2021-04-16T12:05:39.004Z</updated>
+  <updated>2021-04-18T13:52:58.227Z</updated>
   <id>https://www.codecheng.com/</id>
   
   <author>
@@ -17,11 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>常用下载整理</title>
+    <link href="https://www.codecheng.com/posts/fc46bbd0.html"/>
+    <id>https://www.codecheng.com/posts/fc46bbd0.html</id>
+    <published>2021-04-18T13:37:09.000Z</published>
+    <updated>2021-04-18T13:52:58.227Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;国内编程网站网址&quot;&gt;&lt;a href=&quot;#国内编程网站网址&quot; class=&quot;headerlink&quot; title=&quot;国内编程网站网址&quot;&gt;&lt;/a&gt;国内编程网站网址&lt;/h2&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="资源整理" scheme="https://www.codecheng.com/categories/%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/"/>
+    
+    <category term="常用下载" scheme="https://www.codecheng.com/categories/%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/%E5%B8%B8%E7%94%A8%E4%B8%8B%E8%BD%BD/"/>
+    
+    <category term="节约时间" scheme="https://www.codecheng.com/categories/%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/%E5%B8%B8%E7%94%A8%E4%B8%8B%E8%BD%BD/%E8%8A%82%E7%BA%A6%E6%97%B6%E9%97%B4/"/>
+    
+    
+    <category term="资源" scheme="https://www.codecheng.com/tags/%E8%B5%84%E6%BA%90/"/>
+    
+    <category term="常用下载" scheme="https://www.codecheng.com/tags/%E5%B8%B8%E7%94%A8%E4%B8%8B%E8%BD%BD/"/>
+    
+    <category term="扩展" scheme="https://www.codecheng.com/tags/%E6%89%A9%E5%B1%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>学习Git使用</title>
     <link href="https://www.codecheng.com/posts/48926450.html"/>
     <id>https://www.codecheng.com/posts/48926450.html</id>
     <published>2021-04-16T10:24:59.000Z</published>
-    <updated>2021-04-16T12:05:39.004Z</updated>
+    <updated>2021-04-18T13:52:41.430Z</updated>
     
     
       
@@ -46,8 +79,6 @@
     <category term="部署项目" scheme="https://www.codecheng.com/tags/%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE/"/>
     
     <category term="基本技能" scheme="https://www.codecheng.com/tags/%E5%9F%BA%E6%9C%AC%E6%8A%80%E8%83%BD/"/>
-    
-    <category term="分布式版本控制" scheme="https://www.codecheng.com/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
     
   </entry>
   
