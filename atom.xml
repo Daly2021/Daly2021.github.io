@@ -6,7 +6,7 @@
   <link href="https://www.codecheng.com/atom.xml" rel="self"/>
   
   <link href="https://www.codecheng.com/"/>
-  <updated>2021-04-18T13:52:58.227Z</updated>
+  <updated>2021-04-20T14:18:57.963Z</updated>
   <id>https://www.codecheng.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库学习笔记</title>
+    <link href="https://www.codecheng.com/posts/769d2f87.html"/>
+    <id>https://www.codecheng.com/posts/769d2f87.html</id>
+    <published>2021-04-20T14:11:04.000Z</published>
+    <updated>2021-04-20T14:18:57.963Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;MySQL数据库学习-1&quot;&gt;&lt;a href=&quot;#MySQL数据库学习-1&quot; class=&quot;headerlink&quot; title=&quot;MySQL数据库学习|1&quot;&gt;&lt;/a&gt;MySQL数据库学习|1&lt;/h1&gt;&lt;h2 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据库" scheme="https://www.codecheng.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="MySQL" scheme="https://www.codecheng.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/"/>
+    
+    <category term="巩固" scheme="https://www.codecheng.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/%E5%B7%A9%E5%9B%BA/"/>
+    
+    
+    <category term="MySQL8.0" scheme="https://www.codecheng.com/tags/MySQL8-0/"/>
+    
+    <category term="零基础整理" scheme="https://www.codecheng.com/tags/%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86/"/>
+    
+    <category term="数据库" scheme="https://www.codecheng.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
   
   <entry>
     <title>常用下载整理</title>
@@ -213,7 +246,7 @@
     <link href="https://www.codecheng.com/posts/c6e613d8.html"/>
     <id>https://www.codecheng.com/posts/c6e613d8.html</id>
     <published>2021-03-23T14:26:07.000Z</published>
-    <updated>2021-03-23T14:42:55.971Z</updated>
+    <updated>2021-04-20T14:17:18.517Z</updated>
     
     
       

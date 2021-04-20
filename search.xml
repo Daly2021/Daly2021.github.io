@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>数据库学习笔记</title>
+      <link href="posts/769d2f87.html"/>
+      <url>posts/769d2f87.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="MySQL数据库学习-1"><a href="#MySQL数据库学习-1" class="headerlink" title="MySQL数据库学习|1"></a>MySQL数据库学习|1</h1><h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><blockquote><p>概念：数据库用来<strong>存放数据</strong>的</p><p>例如：班上需要存同学的信息，一般用Excel表格存。</p><p>用<strong>行</strong>和<strong>列</strong>的方式来，表格的形式，这也是关系型数据库存储的形式。</p></blockquote><p>后台（后端）的编程语言主要就是用来<strong>运算</strong>和<strong>存储</strong>的。</p><p>很多人选择学习前端，我认为前端是用来<strong>采集</strong>和<strong>展示</strong>数据的，但有要求，必须漂亮，交互友好，不然谁愿意放数据？</p><p>例如我采集到了你的信息，存在哪里？<strong>内存</strong>？不可以，一断电就没了，所以存在磁盘上，这个过程叫<strong>持久化</strong>。</p><p>存储注意问题：</p><ul><li>性能问题</li><li>所以mysql关系型数据库出来了，什么是关系型数据库？我的理解就是<strong>表与表之间是有关系</strong>的。所以：<ul><li>MySQL是一种开放源代码的<strong>关系型</strong>数据库管理系统（RDBMS），使用最常用的数据库管理语言–<strong>结构化查询语言</strong>（SQL全称就是结构化查询语言）进行数据库管理。</li><li>MySQL是开放源代码的，因此任何人都可以在General Public License的许可下下载并根据个性化的需要对其进行修改。</li><li>MySQL因为其速度、可靠性和适应性而备受关注。MySQL是管理内容最好的选择。</li></ul></li></ul><blockquote><p>常见的关系型数据库有哪些呢？MySQL（orale甲骨文公司）  SQL server  （微软公司） db2（IBM公司的） Orale   —       mysql优势 :免费开源</p></blockquote><h2 id="1-1在Windows安装8-0的版本-Mysql"><a href="#1-1在Windows安装8-0的版本-Mysql" class="headerlink" title="1.1在Windows安装8.0的版本 Mysql"></a>1.1在Windows安装8.0的版本 Mysql</h2><h3 id="卸载5-7版本"><a href="#卸载5-7版本" class="headerlink" title="卸载5.7版本"></a>卸载5.7版本</h3><blockquote><p>我的win10电脑之前使用的是mysql5.7版本的  使用的是sqlyog图形化工具，所以要先卸载mysql5.7，尝试使用8.0版本的数据库，换成使用Navicat和DataGrip工具，这些是收费的工具，有破解和别人下载好的，我自己的操作步骤都会截图一步一步的学习的。好好折腾</p></blockquote><p>MySQL5.7升级到8.0，mysql和常用的软件不同，并没有点击一下更新就可以直接从5.7更新到8.0这种操作。。。。</p><p>我的操作步骤：</p><ol><li><p>停止MySQL服务</p></li><li><p>卸载MySQL相关的程序 在设置win+i打开</p><p><img src="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210420172944.png"></p></li></ol><p>这两个都需要，如果你安装了全部就需要卸载这些，我只安装了服务端</p><p><img src="https://blog.noheart.cn/upload/mysql/002.jpg"></p><ol start="3"><li><p>安装目录在C盘，首先打开C:\Program Files，删除MySQL文件夹</p><p><img src="https://blog.noheart.cn/upload/mysql/003.jpg"></p><blockquote><p> 打开隐藏文件ProgramData文件夹，删除下面的MySQL文件</p></blockquote><p><img src="https://blog.noheart.cn/upload/mysql/004.jpg"></p><ol start="4"><li><p>卸载MySQL相关注册表，这里也是很多r人重装不成功的坑。</p><blockquote><p>Windows+R–&gt;regedit–&gt;打开注册表</p></blockquote><p><img src="https://blog.noheart.cn/upload/mysql/005.jpg"></p><blockquote><p>根据路径打开并删除：</p></blockquote><p>HKEY_LOCAL_MACHINE/SYSTEM/ControlSet001/Services/Eventlog/Applications/MySQL </p><p>HKEY_LOCAL_MACHINE/SYSTEM/ControlSet002/Services/Eventlog/Applications/MySQL<br> HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Services/Eventlog/Applications/MySQL</p><p>HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Services一般服务会以相同的名字(名字通常是MySQL</p><blockquote><p>还有就是F3或Ctrl+F打开查找框，输入MySQL，注意焦点放在计算机上</p><p>还有重要的一步删除Connector Net XXX注册表，大家失败的原因好多也是在这个注册表上面</p></blockquote><p><img src="https://blog.noheart.cn/upload/mysql/006.jpg"></p><p><img src="https://blog.noheart.cn/upload/mysql/007.jpg"></p><p>完成以上四步就已经卸载干净MySQL了，可以安装8.0了</p><h3 id="安装8-0版本"><a href="#安装8-0版本" class="headerlink" title="安装8.0版本"></a>安装8.0版本</h3><blockquote><p> 去官网下载:最新版的传送门:<a href="https://dev.mysql.com/downloads/mysql/">点击此处跳转官网下载</a></p></blockquote><p>下载好后详细步骤图解</p><p>基本上都是next</p><p><img src="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210420184653.png"></p><p><img src="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210420185012.png"></p><p><img src="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210420185310.png"></p><p><img src="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210420185539.png"></p><p><img src="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210420185636.png"></p><p><img src="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210420185830.png"></p><p><img src="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210420185927.png"></p><p><img src="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210420190031.png"></p><p><img src="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210420190250.png"></p><p>傻瓜式安装就可以了 下一步</p></li></ol></li></ol><h2 id="2-SQL语句分类"><a href="#2-SQL语句分类" class="headerlink" title="2.SQL语句分类"></a>2.SQL语句分类</h2><ul><li>1.DDL(Data Definition Language):数据定义语言，用来定义数据库对象：库、表、列等。功能：创建、删除、修改库和表结构。</li><li>2.DML(Data Manipulation Language):数据操作语言，用来定义数据库记录:增、删、改表记录。</li><li>3.DCL(Data Control Language):数据控制语言，用来定义访问权限和安全级别。</li><li><strong>4.DQL(Data Query Language):数据查询语言，用来查询记录。</strong>这个才是<strong>重中之重</strong>，先整理前三个</li></ul><h2 id="3-socket-介绍"><a href="#3-socket-介绍" class="headerlink" title="3.socket 介绍"></a>3.socket 介绍</h2><ul><li>客户端和服务端是使用socket链接的。</li><li>socket中文翻译是插座，但是学术叫套接字。其实就是计算机和计算机链接的方式。</li><li>一个计算机使用ip+端口使用某种协议就能和另外一台机子的ip+端口链接通信。（TCP/UDP）</li><li>mysql使用的默认端口是3306，一个客户端随便使用一个端口，就能连接上服务。</li><li>服务器的ip+端口是固定的,客户端往往是随机的。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+          <category> MySQL </category>
+          
+          <category> 巩固 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL8.0 </tag>
+            
+            <tag> 零基础整理 </tag>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>常用下载整理</title>
       <link href="posts/fc46bbd0.html"/>
       <url>posts/fc46bbd0.html</url>
