@@ -247,8 +247,52 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, rgba(3, 166, 255,0.7),rgba(0, 128, 255,0.7));
+	background:linear-gradient(-45deg,#023e8a,#0077b6,#0096c7,#48cae4);
+	background-size:400% 400%;
+	-webkit-animation:Gradient 10s ease infinite;
+	-moz-animation:Gradient 10s ease infinite;
+	animation:Gradient 10s ease infinite;
+	-o-user-select:none;
+	-ms-user-select:none;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	user-select:none}
+.bg-color {
+    background-image: linear-gradient(to right, #023e8a 0%,#48cae4 100%);
+    opacity: 0.8; 
+}	
+	
+	
+.bg-color:before {
+	background-color:rgba(0,0,0,0)}
+@-webkit-keyframes Gradient {
+	0% {
+	background-position:0 50%}
+50% {
+	background-position:100% 50%}
+100% {
+	background-position:0 50%}
 }
+@-moz-keyframes Gradient {
+	0% {
+	background-position:0 50%}
+50% {
+	background-position:100% 50%}
+100% {
+	background-position:0 50%}
+}
+@keyframes Gradient {
+	0% {
+	background-position:0 50%}
+50% {
+	background-position:100% 50%}
+100% {
+	background-position:0 50%}
+}
+.btn-large {
+	line-height:42px!important}
+
+
 
 .text-color {
     color: #0f9d58 !important;
@@ -602,7 +646,7 @@ header .go-back i {
 
 
 .index-card {
-    margin-top: -10px;
+    margin-top: -20px;
     padding-top: 20px;
 }
 
@@ -2062,23 +2106,6 @@ footer .copy-right {
 /*设置头像旋转*/ .frind-ship .title img { object-fit: contain; transition: all 1s; } .friend-div:hover .title img { transform: rotate(360deg); -ms-transform: rotate(360deg); -moz-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); }
 /*深切哀悼抗疫英雄,整个网站变灰*/ /*html { filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); -webkit-filter: grayscale(100%); } -->
 
-/*动态背景*/
-#bg {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-}
-#bg canvas {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
 
 
 /* 深色模式按钮设置 */
@@ -2141,3 +2168,41 @@ footer .copy-right {
 
 /* 滚动条 */ ::-webkit-scrollbar-thumb { background-color: #53acff; background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent); border-radius: 3em; } ::-webkit-scrollbar-track { background-color: #a8a4cc; border-radius: 3em; } ::-webkit-scrollbar { width: 10px; height: 15px; }
 
+/* 友链对齐*/
+.frind-ship .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(
+          135deg,
+          hsl(25deg, 80%, 70%),
+          hsl(220deg, 80%, 70%),
+          hsl(165deg, 80%, 70%),
+          hsl(255deg, 80%, 70%)
+        );
+        background-size: 200% 200%;
+        animation: gradient-move 5s ease alternate infinite;
+      }
+
+      @keyframes gradient-move {
+        0% {
+          background-position: 0% 0%;
+        }
+        100% {
+          background-position: 100% 100%;
+        }
+      }
+    
+	
+	
