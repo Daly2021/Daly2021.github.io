@@ -1,0 +1,2206 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="JSP九大内置对象, 前端,java,指弹，阅读，文艺等">
+    <meta name="description" content="上帝是虚无的神灵，心灵是自己的上帝">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>JSP九大内置对象 | CodeCheng</title>
+    <link rel="icon" type="image/png" href="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210414154030.webp">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },1000); 
+        },1000);//强制显示loading page 1s  
+    };
+    loaded();
+})()
+ </script><meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="CodeCheng" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+<!-- 一言API -->
+<!-- 现代写法，推荐 -->
+<!-- 兼容低版本浏览器 (包括 IE)，可移除 -->
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<!--End-->
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var hitokoto = document.getElementById('hitokoto');
+      hitokoto.innerText = data.hitokoto + '——【' + data.from + '】';
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
+</script>
+
+<script> if (localStorage.getItem('dark') === '1') { document.body.classList.add('dark'); } else if (new Date().getHours() >= 22 || new Date().getHours() < 7) { document.body.classList.add('dark'); } else if (matchMedia('(prefers-color-scheme: dark)').matches) { document.body.classList.add('dark'); } </script> <a onclick="switchNightMode()" id="sma"> <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> </a>
+
+  <!-- 鼠标点击特效  富强民主文明 -->
+    <script src="/js/click_show_text.js"></script>
+
+
+
+ <div id="loading-container">
+     <p class="loading-text">慢慢来，是种诚意，加载中 . . . </p> 
+     <div class="loading-image">
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div> 
+         <div></div>
+     </div>
+ </div><body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210414154030.webp" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">CodeCheng</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/tags">
+          
+          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>文章标签</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>文章分类</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/archives">
+          
+          <i class="fas fa-archive" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>时间轴</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/introduction">
+          
+          <i class="fas fa-user" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>个人简介</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/map">
+          
+          <i class="fas fa fa-globe" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>疫情地图</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留点足迹</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>留点温柔</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>喜欢的书</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/myphoto">
+          
+          <i class="fas fa fa-camera" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>权世界</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+
+      
+      <span>更多好玩</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/navigate">
+          
+          <i class="fas fa-location-arrow" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>个人常用</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://ck_cheng.gitee.io/">
+          
+          <i class="fas fa-compass" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>个人导航</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tx">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>音乐可视化</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/3Dtunnel">
+          
+          <i class="fas fa-car" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>3D隧道</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/newyear">
+          
+          <i class="fas fa-clock" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>2022倒计时</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/Smallwindmill">
+          
+          <i class="fas fa-asterisk" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>小风车</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/mikutap">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>mikutap</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/GameBar">
+          
+          <i class="fas fa-american-sign-language-interpreting" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>游戏小屋</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+<li id="fullscreen_li" class="fullscreen"><a href="javascript:void(0);" class="modal-trigger waves-effect waves-light"><i id="fullscreen" class="fas fa-expand-arrows-alt" title="全屏" style="zoom: 0.65;"></i></a></li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210414154030.webp" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">CodeCheng</div>
+        <div class="logo-desc">
+            
+            上帝是虚无的神灵，心灵是自己的上帝
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			归档
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/tags " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-tags" style="position: absolute;left:28px" ></i>
+			      
+		          <span>文章标签</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:28px" ></i>
+			      
+		          <span>文章分类</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-archive" style="position: absolute;left:28px" ></i>
+			      
+		          <span>时间轴</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/introduction " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-user" style="position: absolute;left:28px" ></i>
+			      
+		          <span>个人简介</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/map " style="margin-left:50px">
+				  
+				   <i class="fa fas fa fa-globe" style="position: absolute;left:28px" ></i>
+			      
+		          <span>疫情地图</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留点足迹
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			留点温柔
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/books " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:28px" ></i>
+			      
+		          <span>喜欢的书</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/myphoto " style="margin-left:50px">
+				  
+				   <i class="fa fas fa fa-camera" style="position: absolute;left:28px" ></i>
+			      
+		          <span>权世界</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fas fa-fw fa-link"></i>
+			
+			更多好玩
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/navigate " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-location-arrow" style="position: absolute;left:28px" ></i>
+			      
+		          <span>个人常用</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://ck_cheng.gitee.io/ " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-compass" style="position: absolute;left:28px" ></i>
+			      
+		          <span>个人导航</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/tx " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:28px" ></i>
+			      
+		          <span>音乐可视化</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/3Dtunnel " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-car" style="position: absolute;left:28px" ></i>
+			      
+		          <span>3D隧道</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/newyear " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-clock" style="position: absolute;left:28px" ></i>
+			      
+		          <span>2022倒计时</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/Smallwindmill " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-asterisk" style="position: absolute;left:28px" ></i>
+			      
+		          <span>小风车</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/mikutap " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:28px" ></i>
+			      
+		          <span>mikutap</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/GameBar " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-american-sign-language-interpreting" style="position: absolute;left:28px" ></i>
+			      
+		          <span>游戏小屋</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/5.webp')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">JSP九大内置对象</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+       background-color: rgb(255, 255, 255,0.7);
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        
+<!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                            <a href="/tags/jsp/">
+                                <span class="chip bg-color">jsp</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%90%8E%E7%AB%AF/">
+                                <span class="chip bg-color">后端</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/jsp/" class="post-category">
+                                jsp
+                            </a>
+                        
+                            <a href="/categories/jsp/java%E5%9F%BA%E7%A1%80/" class="post-category">
+                                java基础
+                            </a>
+                        
+                            <a href="/categories/jsp/java%E5%9F%BA%E7%A1%80/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                后端
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-03-09
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-04-07
+                </div>
+                
+<div class="info-break-policy">  <i class="fa fa-pencil"></i> 作者: CodeCheng  </div>
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    8 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="JSP九大内置对象"><a href="#JSP九大内置对象" class="headerlink" title="JSP九大内置对象"></a>JSP九大内置对象</h1><h2 id="1-request-对象"><a href="#1-request-对象" class="headerlink" title="1. request 对象 :"></a>1. request 对象 :</h2><blockquote>
+<p>代表的是来自客户端的请求 , 客户端发送的请求封装在 request 对象中 , 通过它才能了解到用户的请求信息 , 然后作出响应 , 它是 HTTPServletRequest 的实例 , 作用域为 request ( 响应生成之前 )</p>
+</blockquote>
+<h5 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java">Object getAttribute(String name);// 返回指定属性的属性值
+void setAttribute(String key, Object value);// 设置属性的属性值
+Enumeration getAttributeNames();// 返回所有可以用属性名的枚举
+String getParameter(String name);// 返回指定name的参数值
+Enumeration getParameterNames();// 返回可用参数名的枚举
+String[] getParameterValues(String name);// 返回包含参数name的所有制的数组
+ServletInputStream geetInputStream();// 得到请求体中一行的二进制流
+BufferedReader getReader();// 返回解码过了的请求体
+
+
+String getServerName();// 返回接收请求的服务器主机名
+int getServerPort();// 返回服务器接收此请求所用的端口号
+String getRemoteAddr();// 返回发送请求的客户端的IP地址
+String getRemoteHost();// 返回发送请求的客户端主机名
+String getRealPath();// 返回一个虚拟路径的真实路径
+String getCharacterEncoding();// 返回字符编码方式
+int geContentLength();// 返回请求体的长度 ( 字节数 )
+String getContentType();// 返回请求体的MIME类型
+String getProtocol();// 返回请求用的协议类型以及版本号
+String getScheme();// 返回请求用的协议名称( 例如 : http  https  ftp )<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="2-response-对象"><a href="#2-response-对象" class="headerlink" title="2. response 对象 :"></a>2. response 对象 :</h2><blockquote>
+<p>对象代表的是对客户端的响应 , 也就是说可以通过 response 对象来组织发送到客户端的数据 ; 但是由于组织方式比较底层 , 所以不建议初学者使用 , 需要向客户端发送文字时直接使用 ; 它是 HttpServletResponse 的实例 ; 作用域为 page ( 页面执行期 )</p>
+</blockquote>
+<h5 id="常用方法-1"><a href="#常用方法-1" class="headerlink" title="常用方法"></a>常用方法</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java">String getCharacterEncoding();// 返回响应用的是哪种字符编码
+ServletOutputStream getOutputStream();// 返回响应的一个二进制输出流
+PrintWriter getWriter();// 返回可以向客户端输出字符的一个对象
+void setContentLength(int len);// 设置响应头长度
+void setContentType(String type);// 设置响应的MIME类型
+void sendRedirect(String location);// 重新定向客户端的请求<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="3-session-对象"><a href="#3-session-对象" class="headerlink" title="3. session 对象 :"></a>3. session 对象 :</h2><blockquote>
+<p>指的是客户端与服务器的一次会话 , 从客户连接到服务器的一个 WebApplication 开始 , 直到客户端与服务器断开连接为止 ; 它是 HTTPSession 类的实例 , 作用域为 session ( 会话期 )</p>
+</blockquote>
+<h5 id="常用方法-2"><a href="#常用方法-2" class="headerlink" title="常用方法"></a>常用方法</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java">long getCreationTime();// 返回SESSION创建时间 
+public String getId();// 返回SESSION创建时JSP引擎为它设的惟一ID号 
+long getLastAccessedTime();// 返回此SESSION里客户端最近一次请求时间 
+int getMaxInactiveInterval();// 返回两次请求间隔多长时间此SESSION被取消(ms) 
+String[] getValueNames();// 返回一个包含此SESSION中所有可用属性的数组 
+void invalidate();// 取消SESSION，使SESSION不可用 
+boolean isNew();// 返回服务器创建的一个SESSION,客户端是否已经加入 
+void removeValue(String name);// 删除SESSION中指定的属性 
+void setMaxInactiveInterval();// 设置两次请求间隔多长时间此SESSION被取消(ms)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="4-out-对象"><a href="#4-out-对象" class="headerlink" title="4. out 对象 :"></a>4. out 对象 :</h2><blockquote>
+<p>out 对象是 JspWriter 类的实例,是向客户端输出内容常用的对象 ; 作用域为 page ( 页面执行期 )</p>
+</blockquote>
+<h5 id="常用方法："><a href="#常用方法：" class="headerlink" title="常用方法："></a>常用方法：</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java">void clear();// 清除缓冲区的内容 
+void clearBuffer();// 清除缓冲区的当前内容 
+void flush();// 清空流 
+int getBufferSize();// 返回缓冲区以字节数的大小，如不设缓冲区则为0 
+int getRemaining();// 返回缓冲区还剩余多少可用 
+boolean isAutoFlush();// 返回缓冲区满时，是自动清空还是抛出异常 
+void close();// 关闭输出流 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="5-page-对象"><a href="#5-page-对象" class="headerlink" title="5. page 对象 :"></a>5. page 对象 :</h2><blockquote>
+<p>page 对象就是指向当前 JSP 页面本身 , 有点象类中的 this 指针 , 它是 Object 类的实例 ; page 对象代表了正在运行的由 JSP 文件产生的类对象 , 不建议初学者使用 ; 作用域为 page ( 页面执行期 )</p>
+</blockquote>
+<h5 id="常用方法：-1"><a href="#常用方法：-1" class="headerlink" title="常用方法："></a>常用方法：</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java">class getClass();// 返回此Object的类 
+int hashCode();// 返回此Object的hash码 
+boolean equals(Object obj);// 判断此Object是否与指定的Object对象相等 
+void copy(Object obj);// 把此Object拷贝到指定的Object对象中 
+Object clone();// 克隆此Object对象 
+String toString();// 把此Object对象转换成String类的对象 
+void notify();// 唤醒一个等待的线程 
+void notifyAll();// 唤醒所有等待的线程 
+void wait(int timeout);// 使一个线程处于等待直到timeout结束或被唤醒 
+void wait();// 使一个线程处于等待直到被唤醒 
+void enterMonitor();// 对Object加锁 
+void exitMonitor();// 对Object开锁<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="6-application-对象"><a href="#6-application-对象" class="headerlink" title="6. application 对象 :"></a>6. application 对象 :</h2><blockquote>
+<p>实现了用户间数据的共享 , 可存放全局变量 ; 它开始于服务器的启动 , 直到服务器的关闭 , 在此期间 , 此对象将一直存在 ; 这样在用户的前后连接或不同用户之间的连接中 , 可以对此对象的同一属性进行操作 ; 在任何地方对此对象属性的操作 , 都将影响到其他用户对此的访问 ; 服务器的启动和关闭决定了 application 对象的生命 ; 它是 ServletContext 类的实例 ; 作用域为 application</p>
+</blockquote>
+<h5 id="常用方法：-2"><a href="#常用方法：-2" class="headerlink" title="常用方法："></a>常用方法：</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java">Object getAttribute(String name);// 返回给定名的属性值 
+Enumeration getAttributeNames();// 返回所有可用属性名的枚举 
+void setAttribute(String name,Object obj);// 设定属性的属性值 
+void removeAttribute(String name);// 删除一属性及其属性值 
+String getServerInfo();// 返回JSP(SERVLET)引擎名及版本号 
+String getRealPath(String path);// 返回一虚拟路径的真实路径 
+ServletContext getContext(String uripath);// 返回指定WebApplication的application对象 
+int getMajorVersion();// 返回服务器支持的Servlet API的最大版本号 
+int getMinorVersion();// 返回服务器支持的Servlet API的最大版本号 
+String getMimeType(String file);// 返回指定文件的MIME类型 
+URL getResource(String path);// 返回指定资源(文件及目录)的URL路径 
+InputStream getResourceAsStream(String path);// 返回指定资源的输入流 
+RequestDispatcher getRequestDispatcher(String uripath);// 返回指定资源的RequestDispatcher对象
+Servlet getServlet(String name);// 返回指定名的Servlet
+Enumeration getServlets();// 返回所有Servlet的枚举
+Enumeration getServletNames();// 返回所有Servlet名的枚举
+void log(String msg);// 把指定消息写入Servlet的日志文件
+void log(Exception exception,String msg);// 把指定异常的栈轨迹及错误消息写入Servlet的日志文件
+void log(String msg,Throwable throwable);// 把栈轨迹及给出的Throwable异常的说明信息 写入Servlet的日志文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="7-pageContext-对象"><a href="#7-pageContext-对象" class="headerlink" title="7. pageContext 对象 :"></a>7. pageContext 对象 :</h4><blockquote>
+<p>提供了对 JSP 页面内所有的对象及名字空间的访问 , 也就是说他可以访问到本页所在的 session , 也可以取本页面所在的 application 的某一属性值 , 他相当于页面中所有功能的集大成者 , 它的本类名也叫 pageContext ; 作用域为 Pageconfig 对象</p>
+</blockquote>
+<h5 id="常用方法：-3"><a href="#常用方法：-3" class="headerlink" title="常用方法："></a>常用方法：</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java">JspWriter getOut();// 返回当前客户端响应被使用的JspWriter流(out) 
+HttpSession getSession();// 返回当前页中的HttpSession对象(session) 
+Object getPage();// 返回当前页的Object对象(page) 
+ServletRequest getRequest();// 返回当前页的ServletRequest对象(request) 
+ServletResponse getResponse();// 返回当前页的ServletResponse对象(response) 
+Exception getException();// 返回当前页的Exception对象(exception) 
+ServletConfig getServletConfig();// 返回当前页的ServletConfig对象(config) 
+ServletContext getServletContext();// 返回当前页的ServletContext对象(application)
+void setAttribute(String name,Object attribute);// 设置属性及属性值 
+void setAttribute(String name,Object obj,int scope);// 在指定范围内设置属性及属性值 
+public Object getAttribute(String name);// 取属性的值 
+Object getAttribute(String name,int scope);// 在指定范围内取属性的值 
+public Object findAttribute(String name);// 寻找一属性,返回起属性值或NULL 
+void removeAttribute(String name);// 删除某属性 
+void removeAttribute(String name,int scope);// 在指定范围删除某属性 
+int getAttributeScope(String name);// 返回某属性的作用范围 
+Enumeration getAttributeNamesInScope(int scope);// 返回指定范围内可用的属性名枚举 
+void release();// 释放pageContext所占用的资源 
+void forward(String relativeUrlPath);// 使当前页面重导到另一页面 
+void include(String relativeUrlPath);// 在当前位置包含另一文件 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="8-config-对象"><a href="#8-config-对象" class="headerlink" title="8. config 对象 :"></a>8. config 对象 :</h2><blockquote>
+<p>config 对象是在一个 Servlet 初始化时 , JSP 引擎向它传递信息用的 , 此信息包括 Servlet 初始化时所要用到的参数 ( 通过属性名和属性值构成 ) 以及服务器的有关信息 ( 通过传递一个 ServletContext 对象 ) ; 作用域为 page</p>
+</blockquote>
+<h5 id="常用方法：-4"><a href="#常用方法：-4" class="headerlink" title="常用方法："></a>常用方法：</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java">ServletContext getServletContext();// 返回含有服务器相关信息的ServletContext对象 
+String getInitParameter(String name);// 返回初始化参数的值 
+Enumeration getInitParameterNames();// 返回Servlet初始化所需所有参数的枚举<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="9-exception-对象"><a href="#9-exception-对象" class="headerlink" title="9. exception 对象 :"></a>9. exception 对象 :</h4><blockquote>
+<p>这是一个例外对象 , 当一个页面在运行过程中发生了例外 , 就产生这个对象 ; 如果一个JSP页面要应用此对象 , 就必须把 isErrorPage 设为true , 否则无法编译 ; 他实际上是 Throwable 的对象 ; 作用域为 page</p>
+</blockquote>
+<h5 id="常用方法：-5"><a href="#常用方法：-5" class="headerlink" title="常用方法："></a>常用方法：</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java">String getMessage();// 返回描述异常的消息 
+String toString();// 返回关于异常的简短描述消息 
+void printStackTrace();// 显示异常及其栈轨迹 
+Throwable FillInStackTrace();// 重写异常的执行栈轨迹<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><table>
+<thead>
+<tr>
+<th>对象名</th>
+<th>描述</th>
+<th>类型</th>
+<th>作用域</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>request</td>
+<td>请求对象</td>
+<td>javax.servlet.ServletRequest</td>
+<td>Request</td>
+</tr>
+<tr>
+<td>response</td>
+<td>响应对象</td>
+<td>javax.servlet.SrvletResponse</td>
+<td>Page</td>
+</tr>
+<tr>
+<td>pageContext</td>
+<td>页面上下文对象</td>
+<td>javax.servlet.jsp.PageContext</td>
+<td>Page</td>
+</tr>
+<tr>
+<td>session</td>
+<td>会话对象</td>
+<td>javax.servlet.http.HttpSession</td>
+<td>Session</td>
+</tr>
+<tr>
+<td>application</td>
+<td>应用程序对象</td>
+<td>javax.servlet.ServletContext</td>
+<td>Application</td>
+</tr>
+<tr>
+<td>out</td>
+<td>输出对象</td>
+<td>javax.servlet.jsp.JspWriter</td>
+<td>Page</td>
+</tr>
+<tr>
+<td>config</td>
+<td>配置对象</td>
+<td>javax.servlet.ServletConfig</td>
+<td>Page</td>
+</tr>
+<tr>
+<td>page</td>
+<td>页面对象</td>
+<td>javax.lang.Object</td>
+<td>Page</td>
+</tr>
+<tr>
+<td>exception</td>
+<td>例外对象</td>
+<td>javax.lang.Throwable</td>
+<td>Page</td>
+</tr>
+</tbody></table>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">CodeCheng</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.codecheng.com/posts/21b8264b.html">https://www.codecheng.com/posts/21b8264b.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">CodeCheng</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
+                                <a href="/tags/jsp/">
+                                    <span class="chip bg-color">jsp</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%90%8E%E7%AB%AF/">
+                                    <span class="chip bg-color">后端</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210414154344.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210414154346.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.webp") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'Pkh47V5siKfh5mOj3G8XkGlM-gzGzoHsz',
+        appKey: '9SIyvvIvety50TNitxbazAMg',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/510fa095.html">
+                    <div class="card-image">
+                        
+                        <img src="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210414155205.webp" class="responsive-img" alt="vscode常用插件">
+                        
+                        <span class="card-title">vscode常用插件</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            vscode插件 整理
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-11
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/vscode/" class="post-category">
+                                    vscode
+                                </a>
+                            
+                            <a href="/categories/vscode/%E6%8F%92%E4%BB%B6/" class="post-category">
+                                    插件
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/">
+                        <span class="chip bg-color">前端工具</span>
+                    </a>
+                    
+                    <a href="/tags/vscode/">
+                        <span class="chip bg-color">vscode</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/5d92c8f1.html">
+                    <div class="card-image">
+                        
+                        <img src="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210414155241.webp" class="responsive-img" alt="JSON">
+                        
+                        <span class="card-title">JSON</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            JSON是一种轻量级的数据交换格式。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/json/" class="post-category">
+                                    json
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/json/">
+                        <span class="chip bg-color">json</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+
+<style> .ititle { margin: 15px 0; text-align:center; font-family: 'Architects Daughter', cursive; } .ipage { line-height: 30px; margin: 0 auto; padding: 15px 32px 29px; background-color: #f9f9f9; box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26); -moz-border-radius-bottomleft: 20px 500px; -moz-border-radius-bottomright: 500px 30px; -moz-border-radius-topright: 5px 100px; -webkit-border-bottom-left-radius: 20px 500px; -webkit-border-bottom-right-radius: 64px 10px; -webkit-border-top-right-radius: 5px 100px; border-bottom-left-radius: 20px 500px; border-bottom-right-radius: 64px 10px; border-top-right-radius: 5px 100px; -webkit-background-size: 100% 30px; -moz-box-shadow: 0 2px 10px 1px rgba(117, 189, 228, 0.2); -webkit-box-shadow: 0 2px 10px 1px rgba(34, 87, 155, 0.2); text-shadow: 0 1px 0 #F6EF97; position: relative; } .izhengwen { position: relative; top: 0; left: 0; z-index: 2; height: auto; background: repeating-linear-gradient(to bottom, #f9f9f9, #f9f9f9 31px, #6BA2D8 1px, #f9f9f9); background-size: 100% 32px; } #articleContent p { margin: 0 } .ititle { font-family: 'Architects Daughter', cursive; font-size: 1.45rem!important; padding: 10px auto; } .izhengwen p { position: relative; line-height: 2.2rem!important; text-indent: 2em; font-family: 'Architects Daughter', cursive!important; font-size: 1.45rem!important; } .ipage::before { content: " "; display: inline-block; position: absolute; top: 0px; bottom: 0; right: 52px; z-index: 4; width: 4px; height: 100%; border-left: 1px solid #fca1a1; } .izhengwen p:nth-child(odd):before { content: " "; display: inline-block; position: absolute; top: 0; left: -16px; z-index: 3; width: 24px; height: 24px; background-color: #fff; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; box-shadow: inset 0px 2px 5px 0px rgba(117, 174, 234, 0.26); } .ipage:after { content: " "; display: inline-block; position: absolute; top: 0; bottom: 0; left: 52px; z-index: 3; width: 4px; height: 100%; border-left: 4px double #fca1a1; } .ipage p { padding: 0 2em; color: #333!important; } body.dark .ipage { opacity: 0.85; } /*小屏幕下(手机类)的样式*/ @media only screen and (max-width: 600px) { .ipage { padding: 15px 23px 29px; } .ipage:after { left: 36px; } .ipage::before { right: 36px; } .ipage p { padding: 0 0.9em; } } </style>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">CodeCheng</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">49.2k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2021";
+                    var startMonth = "2";
+                    var startDate = "24";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">黔ICP备2021001761号-1</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+    <a href="mailto:2574833532@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2574833532" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2574833532" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+
+
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+<!--雪花背景掉落-->
+<div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
+    <script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/snow.min.js"></script>
+
+
+
+
+<!--鼠标跟随星星掉落-->
+<script src="/js/cursor.js"></script>
+
+
+<!--全屏-->
+<script src="/js/fullscreen.js" type="module"></script>
+
+<!--夜晚模式-->
+<script>
+    if (localStorage.getItem('dark') === '1') {
+    document.body.classList.add('dark');
+    }
+    else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+    document.body.classList.add('dark');
+    } 
+    else if (matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.classList.add('dark');
+    }
+</script>
+<a onclick="switchNightMode()" id="sma">
+    <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+</a>
+
