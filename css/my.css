@@ -27,3 +27,43 @@ body {
     0%,100%{transform:translate(0,0) rotate(0);} 
 }
 
+/* 添加背景像素纹*/
+.bg-cover::before {
+    background-image: url('https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210428162323.png');
+}
+
+/* 文章顶部hr 剪刀*/
+hr {
+    position: relative;
+    margin: 2rem auto;
+    width: calc(100% - 4px);
+    border: 2px dashed #a4d8fa;
+    background: #fff;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+hr:before {
+    position: absolute;
+    top: -10px;
+    left: 5%;
+    z-index: 1;
+    color: #49b1f5;
+    content: "💨";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 20px;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+hr:hover::before{
+    left: 95%;
+}
+
+
