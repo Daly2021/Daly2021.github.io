@@ -2169,11 +2169,11 @@ footer .copy-right {
 /* 滚动条 */ ::-webkit-scrollbar-thumb { background-color: #53acff; background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent); border-radius: 3em; } ::-webkit-scrollbar-track { background-color: #a8a4cc; border-radius: 3em; } ::-webkit-scrollbar { width: 10px; height: 15px; }
 
 /* 友链对齐*/
-.frind-ship .title {
+/*.frind-ship .title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
+}*/
 
 
       * {
