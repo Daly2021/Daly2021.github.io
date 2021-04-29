@@ -2121,40 +2121,5 @@ footer .copy-right {
 
 /* 滚动条 */ ::-webkit-scrollbar-thumb { background-color: #53acff; background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent); border-radius: 3em; } ::-webkit-scrollbar-track { background-color: #a8a4cc; border-radius: 3em; } ::-webkit-scrollbar { width: 10px; height: 15px; }
 
-/* 友链对齐*/
-/*.frind-ship .title {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}*/
 
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        width: 100vw;
-        height: 100vh;
-        background: linear-gradient(
-          135deg,
-          hsl(25deg, 80%, 70%),
-          hsl(220deg, 80%, 70%),
-          hsl(165deg, 80%, 70%),
-          hsl(255deg, 80%, 70%)
-        );
-        background-size: 200% 200%;
-        animation: gradient-move 5s ease alternate infinite;
-      }
-
-      @keyframes gradient-move {
-        0% {
-          background-position: 0% 0%;
-        }
-        100% {
-          background-position: 100% 100%;
-        }
-      }
-    
 	

@@ -172,19 +172,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
 <!--End-->
-<script>
-  fetch('https://v1.hitokoto.cn')
-    .then(function (res){
-      return res.json();
-    })
-    .then(function (data) {
-      var hitokoto = document.getElementById('hitokoto');
-      hitokoto.innerText = data.hitokoto + '——【' + data.from + '】';
-    })
-    .catch(function (err) {
-      console.error(err);
-    })
-</script>
+
 
 
 
@@ -374,6 +362,15 @@
           <i class="fas fa fa-camera" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>权世界</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/zoeylove">
+          
+          <i class="fa fa-splotch" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>爱你这条路</span>
         </a>
       </li>
       
@@ -677,6 +674,16 @@
               
                 <li>
 
+                  <a href="/zoeylove " style="margin-left:50px">
+				  
+				   <i class="fa fa fa-splotch" style="position: absolute;left:28px" ></i>
+			      
+		          <span>爱你这条路</span>
+                  </a>
+                </li>
+              
+                <li>
+
                   <a href="/life/index.html " style="margin-left:50px">
 				  
 				   <i class="fa fa fa-cloud-moon" style="position: absolute;left:28px" ></i>
@@ -849,9 +856,7 @@
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.webp';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/0.webp)');
 </script>
 
 
@@ -979,24 +984,6 @@
                 </a>
                 
                 
-                <a href="/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/" title="前端工具: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="前端工具" style="background-color: #FFF;">前端工具
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/vscode/" title="vscode: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="vscode" style="background-color: #F9E79F;">vscode
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/maven/" title="maven: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
@@ -1010,6 +997,24 @@
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="项目构建工具" style="background-color: #D7BDE2;">项目构建工具
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/" title="前端工具: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="前端工具" style="background-color: #FFF;">前端工具
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/vscode/" title="vscode: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="vscode" style="background-color: #F9E79F;">vscode
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -1543,20 +1548,10 @@ $(function () {
 
 
 <!--全屏-->
+<!--
 <script src="/js/fullscreen.js" type="module"></script>
+-->
 
-<!--夜晚模式-->
-<script>
-    if (localStorage.getItem('dark') === '1') {
-    document.body.classList.add('dark');
-    }
-    else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
-    document.body.classList.add('dark');
-    } 
-    else if (matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.body.classList.add('dark');
-    }
-</script>
 <a onclick="switchNightMode()" id="sma">
     <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
 </a>

@@ -172,19 +172,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
 <!--End-->
-<script>
-  fetch('https://v1.hitokoto.cn')
-    .then(function (res){
-      return res.json();
-    })
-    .then(function (data) {
-      var hitokoto = document.getElementById('hitokoto');
-      hitokoto.innerText = data.hitokoto + '——【' + data.from + '】';
-    })
-    .catch(function (err) {
-      console.error(err);
-    })
-</script>
+
 
 
 
@@ -374,6 +362,15 @@
           <i class="fas fa fa-camera" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>权世界</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/zoeylove">
+          
+          <i class="fa fa-splotch" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>爱你这条路</span>
         </a>
       </li>
       
@@ -677,6 +674,16 @@
               
                 <li>
 
+                  <a href="/zoeylove " style="margin-left:50px">
+				  
+				   <i class="fa fa fa-splotch" style="position: absolute;left:28px" ></i>
+			      
+		          <span>爱你这条路</span>
+                  </a>
+                </li>
+              
+                <li>
+
                   <a href="/life/index.html " style="margin-left:50px">
 				  
 				   <i class="fa fa fa-cloud-moon" style="position: absolute;left:28px" ></i>
@@ -847,9 +854,7 @@
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.webp';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/0.webp)');
 </script>
 
 
@@ -978,7 +983,7 @@
                 </a>
                 
                 
-                <a href="/categories/vscode/" title="vscode: 1">
+                <a href="/categories/maven/" title="maven: 1">
 							  <div class="moleskine-wrapper">
       <div class="moleskine-notebook">
           <div class="chip notebook-cover center-align waves-effect waves-light
@@ -986,7 +991,7 @@
                   style="background-color: #82E0AA;">                                               
               <div class="notebook-skin
                    chip-default "
-                  >vscode                                  
+                  >maven                                  
               </div>
           </div>
           <div class="notebook-page dotted"></div>
@@ -1014,7 +1019,7 @@
                 </a>
                 
                 
-                <a href="/categories/maven/" title="maven: 1">
+                <a href="/categories/vscode/" title="vscode: 1">
 							  <div class="moleskine-wrapper">
       <div class="moleskine-notebook">
           <div class="chip notebook-cover center-align waves-effect waves-light
@@ -1022,7 +1027,7 @@
                   style="background-color: #A3E4D7;">                                               
               <div class="notebook-skin
                    chip-default "
-                  >maven                                  
+                  >vscode                                  
               </div>
           </div>
           <div class="notebook-page dotted"></div>
@@ -1158,15 +1163,15 @@
                 </a>
                 
                 
-                <a href="/categories/vscode/%E6%8F%92%E4%BB%B6/" title="插件: 1">
+                <a href="/categories/maven/java/" title="java: 1">
 							  <div class="moleskine-wrapper">
       <div class="moleskine-notebook">
           <div class="chip notebook-cover center-align waves-effect waves-light
            chip-default "
-                  style="background-color: #F8F9F9;">                                               
+                  style="background-color: #A3E4D7;">                                               
               <div class="notebook-skin
                    chip-default "
-                  >插件                                  
+                  >java                                  
               </div>
           </div>
           <div class="notebook-page dotted"></div>
@@ -1194,15 +1199,15 @@
                 </a>
                 
                 
-                <a href="/categories/maven/java/" title="java: 1">
+                <a href="/categories/vscode/%E6%8F%92%E4%BB%B6/" title="插件: 1">
 							  <div class="moleskine-wrapper">
       <div class="moleskine-notebook">
           <div class="chip notebook-cover center-align waves-effect waves-light
            chip-default "
-                  style="background-color: #A3E4D7;">                                               
+                  style="background-color: #F8F9F9;">                                               
               <div class="notebook-skin
                    chip-default "
-                  >java                                  
+                  >插件                                  
               </div>
           </div>
           <div class="notebook-page dotted"></div>
@@ -1410,42 +1415,6 @@
                 </a>
                 
                 
-                <a href="/categories/hexo/%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%AB%AF/" title="部署远端: 1">
-							  <div class="moleskine-wrapper">
-      <div class="moleskine-notebook">
-          <div class="chip notebook-cover center-align waves-effect waves-light
-           chip-default "
-                  style="background-color: #F5EEF8;">                                               
-              <div class="notebook-skin
-                   chip-default "
-                  >部署远端                                  
-              </div>
-          </div>
-          <div class="notebook-page dotted"></div>
-      </div>
-  </div>
-
-                </a>
-                
-                
-                <a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/%E9%9A%8F%E7%AC%94/" title="随笔: 1">
-							  <div class="moleskine-wrapper">
-      <div class="moleskine-notebook">
-          <div class="chip notebook-cover center-align waves-effect waves-light
-           chip-default "
-                  style="background-color: #FFF;">                                               
-              <div class="notebook-skin
-                   chip-default "
-                  >随笔                                  
-              </div>
-          </div>
-          <div class="notebook-page dotted"></div>
-      </div>
-  </div>
-
-                </a>
-                
-                
                 <a href="/categories/%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/" title="资源整理: 1">
 							  <div class="moleskine-wrapper">
       <div class="moleskine-notebook">
@@ -1464,6 +1433,24 @@
                 </a>
                 
                 
+                <a href="/categories/hexo/%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%AB%AF/" title="部署远端: 1">
+							  <div class="moleskine-wrapper">
+      <div class="moleskine-notebook">
+          <div class="chip notebook-cover center-align waves-effect waves-light
+           chip-default "
+                  style="background-color: #F5EEF8;">                                               
+              <div class="notebook-skin
+                   chip-default "
+                  >部署远端                                  
+              </div>
+          </div>
+          <div class="notebook-page dotted"></div>
+      </div>
+  </div>
+
+                </a>
+                
+                
                 <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" title="计算机: 1">
 							  <div class="moleskine-wrapper">
       <div class="moleskine-notebook">
@@ -1473,6 +1460,24 @@
               <div class="notebook-skin
                    chip-default "
                   >计算机                                  
+              </div>
+          </div>
+          <div class="notebook-page dotted"></div>
+      </div>
+  </div>
+
+                </a>
+                
+                
+                <a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/%E9%9A%8F%E7%AC%94/" title="随笔: 1">
+							  <div class="moleskine-wrapper">
+      <div class="moleskine-notebook">
+          <div class="chip notebook-cover center-align waves-effect waves-light
+           chip-default "
+                  style="background-color: #FFF;">                                               
+              <div class="notebook-skin
+                   chip-default "
+                  >随笔                                  
               </div>
           </div>
           <div class="notebook-page dotted"></div>
@@ -2073,20 +2078,10 @@ $(function () {
 
 
 <!--全屏-->
+<!--
 <script src="/js/fullscreen.js" type="module"></script>
+-->
 
-<!--夜晚模式-->
-<script>
-    if (localStorage.getItem('dark') === '1') {
-    document.body.classList.add('dark');
-    }
-    else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
-    document.body.classList.add('dark');
-    } 
-    else if (matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.body.classList.add('dark');
-    }
-</script>
 <a onclick="switchNightMode()" id="sma">
     <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
 </a>
